@@ -1,0 +1,463 @@
+<div class="header-bar form-data-work-roles border-b4" ng-controller="TabController">
+    <h5><span>Sidney Clark</span>   | <span class="work_roles_selected">Work Roles: Data Manager</span></h5>
+</div>
+<!-- ./header-bar -->
+
+<div class="padding-10">
+    <div class="reset-info">
+        <md-button class="btn md-raised md-primary pull-right">Reset</md-button>
+        <p>Selections should be limited to those items that are required to perform duties and job responsibilities</p>
+    </div>
+    <!-- ./reset-info -->
+
+    <div class="alert alert-warning top-alert icon-warnAlert clearfix">
+        <p>Change to the below reference section that will affect the access of the application so please be sure to confirm your access to each area.</p>
+    </div>
+    <!-- ./alert -->
+
+    <div class="header-bar date-header">
+        <h5 class="font-weight-600 display-inline-block">Access is Valid from</h5>
+        <md-datepicker class="custom-datepicker" ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+        <h5 class="font-weight-600 display-inline-block">until</h5>
+        <md-datepicker class="custom-datepicker" ng-model="myEndDate" md-placeholder="Enter date"></md-datepicker>
+        <i class="icon-info-sign pull-right"></i>
+    </div>
+    <!-- ./header-bar -->
+
+    <div class="form-category read_confidential_info">
+        <div class="form-category-half">
+            <md-radio-group class="filter-radio"  ng-model="data.group1">
+                <label>Can read confidential Information?<span class="error-star">*</span>
+                </label>
+                <md-radio-button value="yes">Yes</md-radio-button>
+                <md-radio-button value="no"> No </md-radio-button>
+            </md-radio-group>
+
+            <md-input-container class="filter-menu application_selection underline-filter">
+                <label>Select Role in Application <span class="error-star">*</span>
+                </label>
+                <md-select class="user-button" ng-model="selectEnvironment">
+                    <md-option value="Primary Analyst">Primary Analyst</md-option>
+                    <md-option value="Surveillance Analyst">Surveillance Analyst</md-option>
+                    <md-option value="Analytical Manager">Analytical Manager</md-option>
+                    <md-option value="Project lead">Project lead</md-option>
+                    <md-option value="Lead Analytical Mananger">Lead Analytical Manager</md-option>
+                    <md-option value="Chair">Chair</md-option>
+                    <md-option value="Research Assitant">Research Assistant</md-option>
+                    <md-option value="Compliance Officer">Compliance Officer</md-option>
+                    <md-option value="Data Manager">Data Manager</md-option>
+                    <md-option value="Editor">Editor</md-option>
+                    <md-option value="Credit Week Editor">Credit Week Editor</md-option>
+                    <md-option value="Managerial Editor">Managerial Editor</md-option>
+                    <md-option value="Analytical Support unit">Analytical Support unit</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+    </div>
+    <!-- /.form-category -->
+
+    <div class="form-category clearfix">
+        <div class="form-category-half">
+            <md-input-container class="filter-menu work_role_selection underline-filter">
+                <label>Select Database Name <span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionDatabasename" ng-model="selectDatabaseName">
+                    <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                    </md-option>
+                    <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                    </md-option>
+                    <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Project Lead"><span>Project Lead</span>
+                    </md-option>
+                    <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Chair"><span>Chair</span>
+                    </md-option>
+                    <md-option value="Research Assistant"><span>Research Assistant</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="filter-menu environment_selection underline-filter">
+                <label>Select Environment <span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionEnvironment" ng-model="selectEnvironment">
+                    <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                    </md-option>
+                    <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                    </md-option>
+                    <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Project Lead"><span>Project Lead</span>
+                    </md-option>
+                    <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Chair"><span>Chair</span>
+                    </md-option>
+                    <md-option value="Research Assistant"><span>Research Assistant</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-radio-group class="filter-radio level_access" ng-model="data.group1">
+                <label>Linx Level Access <span class="error-star">*</span>
+                </label>
+                <md-radio-button class="linx_level_access" value="yes">Yes</md-radio-button>
+                <md-radio-button class="linx_level_access" value="no"> No </md-radio-button>
+            </md-radio-group>
+
+        </div>
+    </div>
+    <!-- ./form-category -->
+
+    <div class="data-accessBoard clearfix">
+        <div class="header-bar">
+            <h5 class="font-weight-600 display-inline-block">Data Access <span class="error-star">*</span></h5>
+            <i class="icon-info-sign pull-right"></i>
+        </div>
+
+        <div class="data-inputs-wrap application_access_board">
+            <md-input-container class="filter-menu underline-filter">
+                <label>Previleges<span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionPrevileges" ng-change="showaddnewicon($event)" ng-model="selectPrevileges">
+                    <md-option value="Editor"><span>Editor</span>
+                    </md-option>
+                    <md-option value="View Article"><span>View Article</span>
+                    </md-option>
+                    <md-option value="Reporting"><span>Reporting</span>
+                    </md-option>
+                    <md-option value="publish Article"><span>publish Article</span>
+                    </md-option>
+
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="filter-menu underline-filter">
+                <label>Department <span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionDepartment" ng-model="selectDepartment">
+					<md-option value="Finance"><span>Finance</span>
+                    </md-option>
+                    <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                    </md-option>
+                    <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                    </md-option>
+                    <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Project Lead"><span>Project Lead</span>
+                    </md-option>
+                    <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Chair"><span>Chair</span>
+                    </md-option>
+                    <md-option value="Research Assistant"><span>Research Assistant</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="filter-menu underline-filter">
+                <label>Work Role<span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionworkRole" ng-model="selectWorkrole">
+                    <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                    </md-option>
+                    <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                    </md-option>
+                    <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Project Lead"><span>Project Lead</span>
+                    </md-option>
+                    <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Chair"><span>Chair</span>
+                    </md-option>
+                    <md-option value="Research Assistant"><span>Research Assistant</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+		<div class="clearfix"></div>
+		<div class="data-inputs-wrap application_access_board_clone hide">
+            <md-input-container class="filter-menu underline-filter">
+                <label>Previleges<span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionPrevileges" ng-model="selectPrevilegesclone">
+                    <md-option value="Editor"><span>Editor</span>
+                    </md-option>
+                    <md-option value="View Article"><span>View Article</span>
+                    </md-option>
+                    <md-option value="Reporting"><span>Reporting</span>
+                    </md-option>
+                    <md-option value="publish Article"><span>publish Article</span>
+                    </md-option>
+
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="filter-menu underline-filter">
+                <label>Department <span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionDepartment" ng-model="selectDepartmentclone">
+					<md-option value="Finance"><span>Finance</span>
+                    </md-option>
+                    <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                    </md-option>
+                    <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                    </md-option>
+                    <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Project Lead"><span>Project Lead</span>
+                    </md-option>
+                    <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Chair"><span>Chair</span>
+                    </md-option>
+                    <md-option value="Research Assistant"><span>Research Assistant</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="filter-menu underline-filter">
+                <label>Work Role<span class="error-star">*</span>
+                </label>
+                <md-select class="user-button selectoptionworkRole" ng-model="selectWorkroleclone">
+                    <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                    </md-option>
+                    <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                    </md-option>
+                    <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Project Lead"><span>Project Lead</span>
+                    </md-option>
+                    <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                    </md-option>
+                    <md-option value="Chair"><span>Chair</span>
+                    </md-option>
+                    <md-option value="Research Assistant"><span>Research Assistant</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div class="clearfix"></div>
+
+
+        <md-button class="md-icon-button hide addnewiconbutton arrow margin-T20" aria-label="Add new row" translate translate-attr-aria-label="">
+                     <i class="icon-img cursor-pointer addnew" ng-click="cloneselectaccess();"><img src="images/icon_addnew.png"></i>
+                    <md-tooltip md-direction="top">
+                        <span translate="" >Add new row</span>
+                    </md-tooltip>
+                </md-button>
+    </div>
+    <!-- /.data-accessBoard -->
+
+    <div class="wall-board clearfix departments" id="department_Section">
+        <div class="header-bar">
+            <h5 class="font-weight-600 display-inline-block">Departments</h5>
+            <i class="icon-info-sign pull-right"></i>
+        </div>
+        <!-- ./header-bar -->
+        <div class="wb-content">
+            <div class="wp-row">
+                <div class="column col-left">
+				<select name="from" id="multiselect" class="form-control col-content" size="8" multiple="multiple">
+					<option value="Corporate">Corporate</option>
+					<option value="Infrastructure">Infrastructure</option>
+					<option value="International Public Finance">International Public Finance</option>
+					<option value="US Public Finance">US Public Finance</option>
+					<option value="Sovereign">Sovereign</option>
+					<option value="Structured Finance">Structured Finance</option>
+					
+				</select>
+                </div>
+                <div class="column col-center">
+                    <div class="transfer-nav">
+                        <md-icon md-font-icon="icon-double-angle-right" id="multiselect_rightAll" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-right" id="multiselect_rightSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-left" id="multiselect_leftSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-double-angle-left" id="multiselect_leftAll" ></md-icon>
+                    </div>
+                </div>
+                <div class="column col-right">
+					<select name="to" id="multiselect_to" class="form-control col-content" size="8" multiple="multiple">
+					</select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./wall-board -->
+
+    <div class="wall-board work-organize work_regions" id="work_Regions">
+        <div class="header-bar">
+            <h5 class="font-weight-600 display-inline-block">Work Regions</h5>
+            <i class="icon-info-sign pull-right"></i>
+        </div>
+        <!-- ./header-bar -->
+        <div class="wb-content">
+            <div class="wp-row normal_work_region">
+				<div class="column col-left">
+				<select name="from" id="workRegionmultiselect" class="form-control col-content" size="8" multiple="multiple">
+					<option value="North America">North America</option>
+					<option value="Europe">Europe</option>
+					<option value="Asia Pacific">Asia Pacific</option>
+					<option value="Latin America">Latin America</option>
+				</select>
+                </div>
+                <div class="column col-center">
+                    <div class="transfer-nav">
+                        <md-icon md-font-icon="icon-double-angle-right" id="workRegionmultiselect_rightAll" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-right" id="workRegionmultiselect_rightSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-left" id="workRegionmultiselect_leftSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-double-angle-left" id="workRegionmultiselect_leftAll" ></md-icon>
+                    </div>
+                </div>
+                <div class="column col-right">
+					<select name="to" id="workRegionmultiselect_to" class="form-control col-content" size="8" multiple="multiple">
+					</select>
+                </div>	
+            </div>
+			<div class="wp-row accessregion_work_region">
+				<div class="column col-left">
+				<select name="from" id="acc_workRegionmultiselect" class="form-control col-content" size="8" multiple="multiple">
+					<option value="North America">North America</option>
+					<option value="EMEA">EMEA</option>
+					<option value="LATAM">LATAM</option>
+					<option value="APAC Excluding Japan">APAC Excluding Japan</option>
+					<option value="Japan">Japan</option>
+				</select>
+                </div>
+                <div class="column col-center">
+                    <div class="transfer-nav">
+                        <md-icon md-font-icon="icon-double-angle-right" id="acc_workRegionmultiselect_rightAll" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-right" id="acc_workRegionmultiselect_rightSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-left" id="acc_workRegionmultiselect_leftSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-double-angle-left" id="acc_workRegionmultiselect_leftAll" ></md-icon>
+                    </div>
+                </div>
+                <div class="column col-right">
+					<select name="to" id="acc_workRegionmultiselect_to" class="form-control col-content" size="8" multiple="multiple">
+					</select>
+                </div>	
+            </div>
+        </div>
+    </div>
+    <!-- ./wall-board -->
+
+    <div class="wall-board work-organize organization_access" id="organization_Access">
+        <div class="header-bar">
+            <h5 class="font-weight-600 display-inline-block">Organizational Access</h5>
+            <i class="icon-info-sign pull-right"></i>
+        </div>
+        <!-- ./header-bar -->
+        <div class="wb-content">
+            <div class="wp-row">
+				<div class="column col-left">
+				<select name="from" id="organizationAccessmultiselect" class="form-control col-content" size="8" multiple="multiple">
+					<option value="Organization 1">Organization 1</option>
+					<option value="Organization 2">Organization 2</option>
+					<option value="Organization 3">Organization 3</option>
+				</select>
+                </div>
+                <div class="column col-center">
+                    <div class="transfer-nav">
+                        <md-icon md-font-icon="icon-double-angle-right" id="organizationAccessmultiselect_rightAll" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-right" id="organizationAccessmultiselect_rightSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-angle-left" id="organizationAccessmultiselect_leftSelected" ></md-icon>
+                        <md-icon md-font-icon="icon-double-angle-left" id="organizationAccessmultiselect_leftAll" ></md-icon>
+                    </div>
+                </div>
+                <div class="column col-right">
+					<select name="to" id="organizationAccessmultiselect_to" class="form-control col-content" size="8" multiple="multiple">
+					</select>
+                </div>	
+            </div>
+        </div>
+    </div>
+    <!-- ./wall-board -->
+
+    <div class="access-radioButton clearfix">
+        <p>Content Access
+            <md-icon md-font-icon="icon-info-sign"></md-icon>
+        </p>
+        <md-radio-group ng-model="data.contentAccess" ng-change="changecontentAccess(data)">
+            <md-radio-button class="form_content_access" value="Read Only for all Content">Read Only for all Content</md-radio-button>
+            <md-radio-button class="form_content_access" value="Read/Write Access"> Read/Write Access </md-radio-button>
+        </md-radio-group>
+        <div class="access-innerCheckbox">
+            <md-checkbox ng-disabled="true" class="access-inner" aria-label="Disabled checkbox" ng-model="data.accessinner1">Analytical Content</md-checkbox>
+            <md-checkbox ng-disabled="true" class="access-inner" aria-label="Disabled checkbox" ng-model="data.accessinner2">Commercial Content</md-checkbox>
+        </div>
+    </div>
+    <!-- ./access-radioButton -->
+
+    <div class="wall-board">
+        <div class="alert alert-warning middle_alert icon-warnAlert clearfix">
+            <p>Special Content Access is a pre-requisite for access Level</p>
+        </div>
+        <!-- ./alert -->
+
+        <div class="wb-content">
+            <div class="access-radioButton access-SpecialCheckbox">
+                <p>Special Content Access
+                    <md-icon md-font-icon="icon-info-sign"></md-icon>
+                </p>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Credit Estimates" ng-model="data.cb3">Credit Estimates</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Financial Groups" ng-model="data.cb4">Financial Groups</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Trading Estimates" ng-model="data.cb5">Trading Estimates</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Credit Estimates" ng-model="data.cb6">Credit Estimates</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Trading Company" ng-model="data.cb7">Trading Company</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Trading Vendors" ng-model="data.cb8">Trading Vendors</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Trading Vendors" ng-model="data.cb9">Trading Vendors</md-checkbox>
+                <md-checkbox md-no-ink class="specialcontent_checkbox" aria-label="Trading Estimates" ng-model="data.cb10">Trading Estimates</md-checkbox>
+            </div>
+            <!-- ./access-radioButton -->
+            <div class="form-category">
+                <div class="form-category-half">
+                    <md-input-container class="filter-menu underline-filter">
+                        <label>Select Environment <span class="error-star">*</span>
+                        </label>
+                        <md-select class="user-button specialEnvironment" ng-model="selectEnvironment">
+                            <md-option value="Primary Analyst"><span>Primary Analyst</span>
+                            </md-option>
+                            <md-option value="Surveillance Analyst"><span>Surveillance Analyst</span>
+                            </md-option>
+                            <md-option value="Analytical Manager"><span>Analytical Manager</span>
+                            </md-option>
+                            <md-option value="Project Lead"><span>Project Lead</span>
+                            </md-option>
+                            <md-option value="Lead Analytical Manager"><span>Lead Analytical Manager</span>
+                            </md-option>
+                            <md-option value="Chair"><span>Chair</span>
+                            </md-option>
+                            <md-option value="Research Assistant"><span>Research Assistant</span>
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div>
+        </div>
+        <!-- ./wb-content -->
+    </div>
+    <!-- ./wall-board -->
+
+    <div class="justification-area icon-infoSign">
+        <md-input-container>
+            <label>Please Enter the detailed justification if needed:</label>
+            <textarea name="justification" ng-keyup="enterjustification($event)" class="form_justication_content" ng-model="justification"></textarea>
+            <i class="icon-info-sign cursor-pointer" ns-popover ns-popover-template="popover-information" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="left"></i>
+        </md-input-container>
+    </div>
+    <!-- Justification -->
+
+    <div class="alert alert-warning icon-warnAlert clearfix">
+        <p>Your selections above require that you read and agree to the following terms. Please digitally sign by checking the box that you agree to the following:</p>
+        <div class="alert-info">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non voluptates aliquid nihil, recusandae expedita aperiam dolore rerum id esse sapiente quidem animi, cupiditate veritatis at nemo dignissimos alias itaque culpa.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="text-right">
+            <md-checkbox aria-label="agree" class="agreeterms" ng-change="checkagree(data);" ng-model="data.agreeterms">I agree to the terms</md-checkbox>
+        </div>
+    </div>
+    <!-- ./alert -->
+</div>

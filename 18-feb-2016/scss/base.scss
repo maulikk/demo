@@ -1,0 +1,27 @@
+
+/**
+ * Bass
+ * --------------------------------------------------
+ */
+
+.bodybg {
+	@include gradient(saturate($bg-white2gray-gradient-from, 0.1%), darken($bg-white2gray-gradient-to, 0.1%)); 
+} 
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

@@ -1,0 +1,169 @@
+#mail {
+    // Center
+    .center {
+        .header {
+            padding: 0;
+            h2 {
+                font-size: 25px;
+                font-weight: $font-weight-bold;
+                color: $white-color;
+                padding: 10px 0 0;
+                width: 100%;
+                margin: 0;
+            }
+            .search-wrapper {
+                width: 100%;
+            }
+            .sidenav-toggle {
+                margin: 0;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                background: $white-color;
+                border-radius: 0;
+                border-right: 1px solid rgba(0, 0, 0, 0.12);
+            }
+            .search {
+                height: 47px;
+                line-height: 47px;
+                padding: 0 18px;
+                background: $white-color;
+                border: 1px solid $light-gray-color;
+                margin-bottom: 1px;
+                .icon-img {
+                    margin-top: 1px;
+                    img {
+                        width: 23px;
+                        height: auto;
+                    }
+                }
+                input {
+                    padding-left: 0;
+                    padding-right: 16px;
+                    height: 45px;
+                    color: rgba(0, 0, 0, 0.54);
+                    font-size: 16px;
+                    font-family: $font-family-body;
+                    border: 0;
+                }
+            }
+        }
+        .content-card {
+            .toolbar {
+                position: relative;
+                padding: 8px 16px;
+                &.mail-read-pane-toolbar {
+                    display: none;
+                }
+                .page-info {
+                    font-weight: 400;
+                    margin: 0 8px;
+                    white-space: nowrap;
+                }
+            }
+            .content-wrapper {
+                overflow: hidden;
+                position: relative;
+                .content {
+                    padding: 0;
+                    &.mail-list-pane {
+                        width: 100%;
+                        // border-right: 1px solid rgba(0, 0, 0, 0.12);
+                        background: #FAFAFA;
+                    }
+                    &.mail-read-pane {
+                        padding: 24px;
+                    }
+                }
+            }
+        }
+    }
+    #navigation {
+        .content {
+            overflow: hidden !important;
+        }
+    }
+}
+// RESPONSIVE
+@media screen and (max-width: $layout-breakpoint-lg) {
+    #mail {
+        .center {
+            .content-card {
+                &.responsive-read-pane {
+                    .toolbar {
+                        display: none;
+                        &.mail-read-pane-toolbar {
+                            display: flex !important;
+                        }
+                    }
+                    .content-wrapper {
+                        .content {
+                            &.mail-read-pane {
+                                // @include easingOutQuadTimingFunction();
+                                // @include transitionDuration(250ms);
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+                .content-wrapper {
+                    .content {
+                        &.mail-read-pane {
+                            position: absolute;
+                            width: 100%;
+                            max-width: 100%;
+                            top: 0;
+                            bottom: 0;
+                            left: 100%;
+                            // @include easingOutQuadTimingFunction();
+                            // @include transitionDuration(250ms);
+                        }
+                    }
+                }
+                .toolbar {
+                    md-checkbox {
+                        padding-left: 0;
+                    }
+                    .md-button {
+                        &.md-icon-button {
+                            width: 30px;
+                            margin: 0 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $layout-breakpoint-md) {
+    #mail {
+        .center {
+            .content-card {
+                .toolbar {
+                    padding: 8px 12px;
+                    .md-button {
+                        &.md-icon-button {
+                            margin: 0px;
+                        }
+                    }
+                    .page-info {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: $layout-breakpoint-xsm) {
+    #mail {
+        .center {
+            .header {
+                .search {
+                    input {
+                        max-width: 190px;
+                    }
+                }
+            }
+        }
+    }
+}

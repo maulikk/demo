@@ -1,0 +1,58 @@
+.icon-style {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat !important;
+  display: inline-block;
+  background-position: center center !important;
+  &.large-icon {
+  	width: 47px;
+  	height: 25px;
+  }
+} 
+.icons-plus-circle {
+  &:before {
+    font-family: 'FontAwesome';
+    content: "\f055";
+    font-size: 24px;
+    color: $gray-color;
+  }
+}
+.expanded {
+  .icons-plus-circle {
+    &:before {
+      font-family: 'FontAwesome';
+      content: "\f056";
+      font-size: 24px;
+      color: $gray-color;
+    }
+  }
+}
+
+.icons-right-arrow {
+  background: url("../images/icon_large-right-arrow.png");
+  background-size: 47px 25px;  
+}
+.icons-lock {
+	background: url("../images/icon_lock.png");
+  	background-size: 11px 16px;  	
+}
+.icons-comments {
+	 background: url("../images/icon_comments.png");
+  	background-size: 32px auto;  	
+  	vertical-align: middle;
+}
+.icons-comments-question {
+    background: url("../images/icon_comments-question.png");
+    background-size: 32px auto;   
+    vertical-align: middle;
+}
+.icons-blue-comments {
+   background: url("../images/icon_blue-comments.png");
+    background-size: 32px auto;   
+    vertical-align: middle;
+}
+.icons-blue-comments-question {
+    background: url("../images/icon_blue-comments-question.png");
+    background-size: 32px auto;   
+    vertical-align: middle;
+}

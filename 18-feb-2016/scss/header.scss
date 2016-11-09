@@ -1,0 +1,127 @@
+/**
+ * Header
+ * --------------------------------------------------
+ */
+
+#header {
+  .brand-logo {
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+    text-align: center;
+    position: relative;
+    img {
+      margin: 5px 0 0 15px;
+    }
+    &:after {
+      position: absolute;
+      top: 5px;
+      right: 0;
+      content: '';
+      border-right: 1px solid #ccc;
+      width: 1px;
+      height: 39px;
+    }
+  }
+  .textImg-arp {
+    width: 195px;
+    min-width: 195px; 
+    max-width: 195px;
+    padding: 5px 10px 0 35px;
+  }
+  .suitcase-key {
+    margin-right: 58px;
+    .icon-img {
+      img {
+        width: 48px;
+        height: auto;
+      }
+    }
+  }
+  h1 {
+    font-family: $font-family-HelveticaNeueConBold;
+    font-size: 24px;
+    font-weight: $font-weight-bold;
+    color: $dark-gray;
+    text-transform: uppercase;
+    margin-left: 35px;
+    letter-spacing: 1px;
+  }
+  @media screen and (max-width: $layout-breakpoint-md) {
+    .icon-img {
+      padding: 5px;
+      img {
+        width: auto;
+        height: 24px;
+      }
+    }
+    .suitcase-key {
+      margin-right: 25px;
+    }
+    .brand-logo {
+      max-width: 220px;
+      min-width: 220px;
+      width: 220px; 
+      img {
+        width: 180px;
+        height: auto;
+      }
+      &:after {
+        top: 0;
+      }
+    }
+    .textImg-arp { 
+      max-width: 140px;
+      min-width: 140px;
+      width: 140px;
+      padding: 0 10px;
+      .icon-img {
+        padding: 0;
+      }
+      img {
+        width: 120px;
+        height: auto;
+      }
+    } 
+  }
+  @media screen and (max-width: $layout-breakpoint-md) {
+    .brand-logo {
+      max-width: 185px;
+      min-width: 185px;
+      width: 185px; 
+      img {
+        width: 150px;
+        height: auto;
+      }
+    }
+    .suitcase-key {
+      margin-right: 40px;
+    }
+    h1 { 
+      font-size: 16px;  
+      margin-left: 20px;
+    }
+  }
+}
+.badge {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  min-width: 24px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 7px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 24px;
+  text-align: center;
+}
+.icon-img {
+  position: relative;
+  .badge {
+    right: -15px;
+    top: -3px;
+
+  }
+}

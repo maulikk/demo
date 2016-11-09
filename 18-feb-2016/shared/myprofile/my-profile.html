@@ -1,0 +1,109 @@
+<div class="inner-page">
+    <div class="new-request-content">
+        <div class="header" layout-align="start center">
+            <h2>My Profile</h2>
+        </div>
+        <!-- ./header -->
+    </div>
+
+    <div class="content-card new-request-content" layout="column" flex ng-class="{'responsive-read-pane' : vm.responsiveReadPane}" ui-view="content-card">
+
+        <div class="content-wrapper" layout="row" ng-controller="TabController" flex>
+
+            <md-content class="content flex-100 ms-scroll ng-scope md-default-theme" flex="100" ms-scroll>
+
+                <div ng-cloak class="number-tabs">
+                    <md-content>
+
+                        <div class="content-panel">
+                            <div class="content-panel-header">
+                                <h3>Profile Information</h3>
+                            </div>
+                            <!-- ./content-panel-header -->
+                            <div class="content-panel-body clearfix">
+                                <table class="profile-detail-tbl">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label>First Name</label>
+                                            </td>
+                                            <td><span>Johnson</span>
+                                            </td>
+                                            <td>
+                                                <label>Last Name</label>
+                                            </td>
+                                            <td><span>Johnson</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>Title</label>
+                                            </td>
+                                            <td><span>VP Analytics, Japan</span>
+                                            </td>
+                                            <td>
+                                                <label>Manager</label>
+                                            </td>
+                                            <td><span>Andrew Thompson</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>Enterprise Policy Role</label>
+                                            </td>
+                                            <td><span>Line manager, Analyst</span>
+                                            </td>
+                                            <td>
+                                                <label>Location</label>
+                                            </td>
+                                            <td><span>Japan</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>Department</label>
+                                            </td>
+                                            <td><span>Finance</span>
+                                            </td>
+                                            <td>
+                                                <label>Email</label>
+                                            </td>
+                                            <td><span>Joan_johnson@standardandpoors.com</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>Phone Number</label>
+                                            </td>
+                                            <td><span>212.234.5678</span>
+                                            </td>
+                                            <td>
+                                                <label></label>
+                                            </td>
+                                            <td><span></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- ./profile-detail-tbl -->
+
+                            </div>
+                            <!-- ./content-panel-body -->
+                        </div>
+                        <!-- ./content-panel  -->
+
+
+                    </md-content>
+                </div>
+
+            </md-content>
+            <!-- ./mail-list-pane -->
+
+        </div>
+        <!-- ./content-wrapper -->
+
+    </div>
+    <!-- ./content-card-->
+
+</div>
+<!-- ./inner-page -->

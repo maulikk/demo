@@ -1,0 +1,61 @@
+<div class="new-request-content">
+    <div class="header" layout-align="start center">
+        <h2>Run Reports</h2>
+    </div>
+    <!-- ./header -->
+</div>
+
+<md-toolbar class="innerpage-md-toolbar">
+    <h3>Select Report</h3>
+</md-toolbar>
+
+<perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+    <div class="content-card new-request-content" layout="column" flex ng-class="{'responsive-read-pane' : vm.responsiveReadPane}" ui-view="content-card">
+
+        <div class="content-wrapper" layout="row" ng-controller="TabController" flex>
+
+            <md-content class="content flex-100 ms-scroll ng-scope md-default-theme" flex="100" ms-scroll>
+
+                <div ng-cloak class="number-tabs">
+                    <md-content>
+
+                        <div class="content-panel">
+                            <!-- ./content-panel-header -->
+                            <div class="content-panel-body clearfix">
+
+                                <div class="reports-header">
+                                    <md-input-container class="filter-menu underline-filter application-access hide-label">
+                                        <label>Available Reports</label>
+                                        <md-select class="user-button" ng-change="changeapplication()" ng-model="selectedApplication">
+                                            <md-option value="User Application Entitlement">User Application Entitlement</md-option>
+                                            <md-option value="Provisioned Application Users">Provisioned Application Users</md-option>
+                                            <md-option value="User Application Access Activity">User Application Access Activity</md-option>
+                                            <md-option value="Role Access Exceptions">Role Access Exceptions</md-option>
+                                            <md-option value="Access Provisioning Efficiency">Access Provisioning Efficiency</md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                                <div class="reports-body">
+                                    <div class="no-access-found">
+                                        <img class="icon-img" src="images/icon_lg-reports.png">
+                                        <h3>No Report Selected
+                                            <br><br>Select Your Report from the
+                                            <br>Options Available Above</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ./content-panel-body -->
+                        </div>
+                        <!-- ./content-panel  -->
+                    </md-content>
+                </div>
+
+            </md-content>
+            <!-- ./mail-list-pane -->
+
+        </div>
+        <!-- ./content-wrapper -->
+
+    </div>
+    <!-- ./content-card-->
+</perfect-scrollbar>

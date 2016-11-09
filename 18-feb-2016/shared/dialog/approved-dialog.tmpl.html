@@ -1,0 +1,31 @@
+<md-dialog aria-label="Autocomplete Dialog Example" ng-cloak class="dialog-box">
+    <div class="dialog-box-in">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <div class="md-toolbar-tools-in">
+                    <md-icon md-font-icon="icon-warning-sign"></md-icon>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content text-center">
+                <p>You have <span class="approved-text">APPROVED</span> the selected accedd Requests</p>
+                <h3>"Access to SCSP" for John Smith <br> ID #878769702</h3>
+            </div>
+        </md-dialog-content>
+    </div>
+    <div class="md-actions">
+        <div class="pull-left">
+            <md-button class="cursor-pointer" ng-click="ctrl.cancel()" aria-label="Close dialog">Close</md-button>
+        </div>
+        <span class="flex"></span>
+        <div class="pull-right">
+            <md-button ng-click="ctrl.cancel()" aria-label="Finished" ng-click="ctrl.finish($event)">Yes Approve <md-icon md-font-icon="icon-ok"></md-icon></md-button>
+        </div>
+    </div>
+    <!-- ./dialog-box-in -->
+
+</md-dialog>
+<!-- ./dialog-box -->
+
+

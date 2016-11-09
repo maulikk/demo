@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Standard and Poor's Rating Services</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- <link href="./assets/icons/style.css" rel="stylesheet"> -->
+    <link href="./arp/angular-material/angular-material.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href="./css/font-awesome_v3.2.1.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/nsPopover.css" rel="stylesheet" />
+    <link href="./css/perfect-scrollbar.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+    <style>
+        .scroller {
+            width: 100%;
+            overflow-y: hidden;
+            position: relative;
+        }
+        md-tabs.noTabPanel md-tabs-wrapper {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body id="apps" class="boxed" ng-app="sprsApp" ng-controller="MainCtrl" ng-init="init($event)" layout="column">
+
+    <div id="main" class="animate-slide-up" flex layout="column" ui-view="main"></div>
+
+
+
+    <!-- #/main -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="./arp/angular/angular.js" type="text/javascript"></script>
+
+    <script src="./arp/angular-animate/angular-animate.js" type="text/javascript"></script>
+    <script src="./arp/angular-aria/angular-aria.js" type="text/javascript"></script>
+    <script src="./arp/angular-material/angular-material.js" type="text/javascript"></script>
+    <script src="./js/angular-route.min.js"></script>
+    <script src="./js/angular-ui-router.js"></script>
+    <script src="./js/nsPopover.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js'></script>
+    <script src="http://mgcrea.github.io/angular-strap/dist/angular-strap.min.js"></script>
+
+    <script src="./js/perfect-scrollbar.jquery.js"></script>
+    <script src="./js/perfect-scrollbar.with-mousewheel.min.js"></script>
+    <script src="./js/angular-perfect-scrollbar.js"></script>
+    <script src="./js/multiselect.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/route.js"></script>
+</body>
+<!-- ./boxed -->
+
+</html>

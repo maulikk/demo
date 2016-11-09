@@ -1,0 +1,90 @@
+<div id="header" flex layout="row" layout-align="start center">
+
+    <div layout="row" layout-align="start center" flex>
+        <div class="brand-logo" ng-click="backtohome();" flex layout="row" layout-align="start center">
+            <a href="#"><img src="images/sprs-logo.jpg"></a>
+        </div>
+        <h1>Access Request portal</h1>
+        <!-- <div class="textImg-arp" flex layout="row" layout-align="start center" hide-sm>
+            <i class="icon-img">
+                <img src="images/text-img_arp.png">
+            </i>
+        </div>
+        <div layout="row" flex layout-align="start center" hide-sm>
+            <i class="icon-img">
+                <img src="images/icon_cloudLock.png">
+            </i>
+        </div> -->
+    </div>
+
+    <div class="suitcase-key" layout="row" layout-align="start center">
+        <a ui-sref="home.briefcase" class="icon-img">
+            <img src="images/icon_suitcaseKey.png">
+            <span class="badge red-bg white-text">5</span>
+        </a>
+    </div>
+
+    <div layout="row" layout-align="start center">
+        <md-menu-bar id="user-menu">
+            <md-menu md-offset="0 72" md-position-mode="target-right target">
+                <md-button class="user-button" ng-click="$mdOpenMenu()" aria-label="User settings" translate md-menu-origin translate-attr-aria-label="TOOLBAR.USER_SETTINGS">
+                    <div layout="row" layout-align="space-between center">
+                        <div class="avatar-wrapper">
+                        </div>
+                        <md-icon class="icon-profile-circle app-show-sm"><img src="images/icon_profile-circle.png">
+                        </md-icon>
+                        <span class="username" hide-sm>Joan Johnson</span>
+                        <md-icon md-font-icon="icon-angle-down" class="icon s16"></md-icon>
+                    </div>
+                </md-button>
+
+                <md-menu-content width="3" class="md-background-bg">
+                    <md-menu-item ui-sref="home.myprofile">
+                        <md-button>
+                            <span layout="row" layout-align="start center">
+                                <!-- <md-icon class="icon"><img src="images/icon_profile.png"></md-icon>. -->
+                                <md-icon md-font-icon="icon-user"></md-icon>
+                                <span>My Profile</span>
+                            </span>
+                        </md-button>
+                    </md-menu-item>
+
+                    <md-menu-item>
+                        <md-menu id="user-status-menu">
+                            <md-button>
+                                <span layout="row" layout-align="start center">
+                                    <!-- <md-icon class="icon"><img src="images/icon_settings.png"></md-icon> -->
+                                    <md-icon md-font-icon="icon-cogs"></md-icon>
+                                    <span>Settings</span>
+                                </span>
+                            </md-button>
+                            <md-menu-content width="2">
+                                <div id="theme-options-list" layout="column">
+                                    <div class="theme-option">
+                                        <div class="option-title">Layout Mode:</div>
+                                        <md-radio-group layout="row" layout-align="start center" ng-model="vm.layoutMode" ng-change="updateLayoutMode()">
+                                            <md-radio-button name="layoutmode" value="boxed">Boxed</md-radio-button>
+                                            <md-radio-button name="layoutmode" value="wide">Wide</md-radio-button>
+                                        </md-radio-group>
+                                    </div>
+                                </div>
+                            </md-menu-content>
+                        </md-menu>
+                    </md-menu-item>
+
+                    <md-menu-item>
+                        <md-button ng-click="vm.logout()">
+                            <span layout="row" layout-align="start center">
+                                <!-- <md-icon class="icon"><img src="images/icon_logout.png"></md-icon> -->
+                                <md-icon md-font-icon="icon-signout"></md-icon>
+                                <span>Log out</span>
+                            </span>
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </md-menu-bar>
+    </div>
+
+</div>
+<!-- #/header -->

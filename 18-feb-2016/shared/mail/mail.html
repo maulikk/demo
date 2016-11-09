@@ -1,0 +1,118 @@
+<div class="top-bg md-accent-bg new-request-top-bg"></div>
+<!-- ./top-bg -->
+
+<md-sidenav id="navigation" ng-class="class" class="sidenav" md-is-locked-open="$mdMedia('gt-md')" md-component-id="main-sidenav" ui-view="navigation" ms-scroll ms-sidenav-helper>{{class}}
+</md-sidenav>
+<!-- ./sidenav -->
+
+<div class="center md-layout-column" layout="column" flex ui-view="main-content">
+
+    <div class="header md-layout-column" flex layout-align="start center">
+        <h2>Inbox</h2>
+        <div class="search-wrapper md-layout-row" layout="row" layout-align="start center" flex>
+            <div class="search md-layout-row" flex layout="row" layout-align="start center">
+                <input flex ng-model="vm.search" type="text" placeholder="Enter Request or Certificate ID" translate translate-attr-placeholder="MAIL.SEARCH_PLACEHOLDER">
+                <i class="icon-img">
+                    <img src="images/icon_search.png">
+                </i>
+            </div>
+        </div>
+    </div>
+    <!-- ./header -->
+
+    <div class="content-card md-layout-column" layout="column" flex ng-class="{'responsive-read-pane' : vm.responsiveReadPane}" ui-view="content-card">
+        <div class="toolbar mail-read-pane-toolbar" layout="row" layout-align="space-between center">
+            <md-button class="md-icon-button" ng-click="vm.closeReadPane()" aria-label="Back" translate translate-attr-aria-label="MAIL.BACK">
+                <md-icon md-font-icon="icon-keyboard-backspace"></md-icon>
+            </md-button>
+        </div>
+        <!-- ./toolbar -->
+        <div class="toolbar md-layout-row" layout="row" layout-align="space-between center" ng-controller="FilterController">
+            <div class="toolbar-align" layout="row" layout-align="start center">
+
+                <md-input-container class="filter-menu hide-label">
+                    <label>Filter By</label>
+                    <md-select class="user-button" ng-change="searchfilterby()" ng-model="selectedUser1">
+                        <md-option value="all">All</md-option>
+                        <md-option value="request">Request</md-option>
+                        <md-option value="certifications">Certifications</md-option>
+                    </md-select>
+                </md-input-container>
+
+
+                <div class="divider-vertical"></div>
+
+                <md-input-container class="filter-menu hide-label">
+                    <label>Select Status</label>
+                    <md-select class="user-button" ng-change="statusby()" ng-model="selectedUser2">
+                        <md-option value="">All</md-option>
+                        <md-option value="pending">Pending</md-option>
+                        <md-option value="completed">Completed</md-option>
+                    </md-select>
+                </md-input-container>
+
+                <div class="divider-vertical"></div>
+
+            </div>
+
+            <div class="mail-pagination" layout="row" layout-align="start center" translate-attr-aria-label="MAIL.REFRESH">
+
+                <md-button class="md-icon-button arrow" aria-label="Previous" translate translate-attr-aria-label="MAIL.PREVIOUS">
+                    <md-icon md-font-icon="icon-angle-left"></md-icon>
+                    <md-tooltip>
+                        <span translate="MAIL.PREVIOUS">Previous</span>
+                    </md-tooltip>
+                </md-button>
+
+                <span class="page-info" hide-sm>1 - 25</span>
+
+                <md-button class="md-icon-button arrow" aria-label="Next" translate translate-attr-aria-label="MAIL.NEXT">
+                    <md-icon md-font-icon="icon-angle-right"></md-icon>
+                    <md-tooltip>
+                        <span translate="MAIL.NEXT">Next</span>
+                    </md-tooltip>
+                </md-button>
+
+                <span class="page-info" hide-sm>of 145</span>
+
+            </div>
+
+            <div layout="row" layout-align="start center" class="sort-icon ascending-order" ng-click="mailsort($event)">
+
+                <i class="icon-img data-ascending">
+                    <img src="images/icon_ascending-order.png">
+                    <md-tooltip>
+                        <span translate="MAIL.NEXT">Create Data Ascending</span> 
+                    </md-tooltip>
+                </i>
+
+                <i class="icon-img data-descending">
+                    <img src="images/icon_descending-order.png">
+                    <md-tooltip> 
+                        <span translate="MAIL.NEXT">Create Data Descending</span>
+                    </md-tooltip>
+                </i>
+
+            </div>
+
+        </div>
+        <!-- ./toolbar -->
+
+        <perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+            <div class="content-wrapper" layout="row" flex>            
+                <md-content class="content mail-list-pane flex-100  ms-scroll ng-scope md-default-theme" flex="100" ng-include="'shared/mail/mail-list.html'" ms-scroll>
+                </md-content>
+                <!-- ./mail-list-pane -->
+            </div>
+            <!-- ./content-wrapper -->
+        </perfect-scrollbar>   
+    </div>
+    <!-- ./content-card-->
+
+</div>
+<!-- ./center -->
+
+<script type="text/ng-template" id="popover-questions-comments">
+    <div class="md-dialog dialog-box user-tbl triangle-bdr left" ng-include="'shared/dialog/popover-questions-comments.tmpl.html'"></div>
+    <!-- ./dialog-box -->
+</script>

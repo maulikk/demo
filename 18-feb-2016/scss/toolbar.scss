@@ -1,0 +1,426 @@
+/* TOOLBAR */
+
+// Variables
+$toolbarHeight: 60px;
+#toolbar {
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  #user-menu {
+    height: $toolbarHeight;
+    padding: 0;
+    border-radius: 0;
+    md-menu-item .md-button {
+      color: $dark-gray;
+      md-icon {
+        margin: auto 16px auto 0;
+      }
+    }
+    md-menu-content {
+      &.md-menu-bar-menu {
+        &.md-dense {
+          padding: 8px 0;
+          .md-button, md-menu-item {
+            height: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+    }
+    #user-status-menu {
+      md-menu-item {
+        &.selected {
+          opacity: .3;
+        }
+      }
+    }
+    .user-button {
+      margin: 0;
+      // padding: 0 15px;
+      padding: 0 23px;
+      height: $toolbarHeight;
+      text-transform: none;
+      border-radius: 0;
+      .avatar-wrapper {
+        position: relative;
+        .status {
+          position: absolute;
+          bottom: -3px;
+          right: 5px;
+        }
+      }
+      md-icon {
+        // margin: 0;
+        &.icon-profile-circle {
+          height: 36px;
+          width: 36px;
+        }
+      }
+      .username {
+        margin: 0 8px;
+        font-weight: 700;
+        font-size: 13px;
+      }
+    }
+    &:after {
+      position: absolute;
+      top: 11px;
+      left: 0;
+      content: '';
+      border-right: 1px solid #ccc;
+      width: 1px;
+      height: 39px;
+    }
+  } 
+  // RESPONSIVE
+  @media screen and (max-width: $layout-breakpoint-md) {
+    #user-menu { 
+      .user-button {
+        padding: 0 5px;  
+        .username {
+          margin: 0 0 0 5px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $layout-breakpoint-sm) {
+    #user-menu {
+      .user-button {
+        md-icon {
+          font-size: 24px;
+          &.icon-profile-circle {
+            width: 30px;
+            height: 30px;
+            img {
+              width: 28px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .md-button {
+      min-width: 75px;
+    } 
+  }
+
+}
+md-toolbar.header-toolbar {
+  background-color: $toolbar-bg;
+}
+md-menu-bar .md-menu {
+  display: inline-block;
+  padding: 0;
+  position: relative;
+}
+md-toolbar .md-menu {
+  height: auto;
+  margin: auto;
+}
+/* md-menu-bar:not(.md-keyboard-mode):not(.md-open) md-menu button:hover, 
+md-menu-bar:not(.md-keyboard-mode):not(.md-open) md-menu button:focus {
+    background: transparent;
+} */
+
+md-menu-bar md-menu.md-open > button, md-menu-bar md-menu > button:focus {
+  outline: none;
+  background: rgb(238, 238, 238);
+}
+a.md-button.md-default-theme:not([disabled]):hover, a.md-button:not([disabled]):hover, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+  background-color: transparent;
+}
+md-toolbar.md-default-theme:not(.md-menu-toolbar) .md-button:not(.md-raised), md-toolbar:not(.md-menu-toolbar) .md-button:not(.md-raised) {
+  color: $dark-gray;
+}
+md-toolbar:not(.md-menu-toolbar) md-icon {
+  color: $dark-gray;
+  font-size: 26px;
+  margin-top: 6px;
+}
+ 
+
+.filter-menu {
+    .user-button {
+        .md-select-icon:after{
+          font-family: 'FontAwesome';
+          content: "\f107";
+          color: $dark-gray;
+          font-size: 26px;
+          transform:none
+        }
+      .md-select-value{
+        border-bottom-width: 0px;
+        span{         
+          color: $dark-gray;
+          font-size:16px;          
+          margin:0px 16px 0px 7px;  
+        }
+        span.md-select-icon{
+            margin:0px auto;
+        }         
+      }      
+    }
+    md-select:not([disabled]):focus {
+      .md-select-value{
+        border-bottom-color: transparent;
+      }
+    }
+    &.hide-label {
+      &.md-input-has-value {
+        label {
+          display: none;
+        }
+      }
+    }
+
+}
+/* .md-input-has-value {
+  label {
+    display: none;
+  }
+} */
+ 
+
+.toolbar {
+  .filter-menu {
+      width: 115px !important;
+    }
+  .dropdown-menu {
+    height: $toolbarHeight;
+    padding: 0;
+    md-menu-item .md-button {
+      color: $dark-gray;
+      md-icon {
+        margin: auto 16px auto 0;
+      }
+    }
+    md-menu-content {
+      &.md-menu-bar-menu {
+        &.md-dense {
+          padding: 8px 0;
+          .md-button, md-menu-item {
+            height: 48px;
+            line-height: 48px;
+          }
+        }
+      }
+    }
+    #user-status-menu {
+      md-menu-item {
+        &.selected {
+          opacity: .3;
+        }
+      }
+    }
+    .user-button {
+      margin: 0;
+      padding: 0px;
+      height: $toolbarHeight;
+      text-transform: none;
+      border-radius: 0;
+      min-width: 120px;
+      .avatar-wrapper {
+        position: relative;
+        .status {
+          position: absolute;
+          bottom: -3px;
+          right: 5px;
+        }
+      }
+      .username {
+        margin: 0 16px;
+        font-weight: 400;
+        font-size: 16px;
+        float: left;
+      }
+    }
+    md-icon {
+      color: $dark-gray;
+      font-size: 30px;
+      margin: -3px 0 0;
+      float: right;
+    }
+  }
+  .divider-vertical {
+    margin: 0 50px;
+  }  
+  .toolbar-align {
+    margin-left: -15px;
+  }
+  .mail-pagination {
+    .md-font {
+      color: $dark-gray;
+      font-size: 26px;
+    }
+    md-icon {
+      height: auto;
+    }
+    .page-info {
+      font-size: 16px;
+    }
+    .md-button {
+      &.md-icon-button {
+        width: 30px;
+        height: 30px;
+        // margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .sort-icon {
+    cursor: pointer;
+    img {
+      outline: none;
+      border: none;
+      width: 23px;
+      height: auto;      
+    }
+    &.ascending-order {
+      .data-ascending {
+        display: block;
+      }
+      .data-descending {
+        display: none;
+      }
+    }
+    &.descending-order {
+      .data-ascending {
+        display: none;
+      }
+      .data-descending {
+        display: block;
+      }
+    }
+  }
+
+   // RESPONSIVE
+  @media screen and (max-width: $layout-breakpoint-md) {
+    .dropdown-menu {
+      .user-button {
+        .username {
+          margin: 0 5px 0 10px;
+        }
+      }
+    }
+    .divider-vertical {
+      margin: 0 20px;
+    }
+  }
+ @media screen and (max-width: $layout-breakpoint-sm) {
+    .dropdown-menu {
+      .user-button { 
+        padding: 0 5px;
+        min-width: 60px;
+      }
+      md-icon {
+        font-size: 24px;
+        height: auto;
+        img {
+          height: 18px;
+          width: auto;
+        }
+      }
+    } 
+  }
+}
+
+
+
+.md-open-menu-container {
+  margin-top: 10px;
+  .md-menu-bar-menu {
+    border: 1px solid #c4c4c4;
+  }
+  .md-button { 
+    span {
+      font-weight: 600;
+    }
+  }
+  md-menu-item .md-button { 
+    md-icon {
+      margin: auto 16px auto 0;
+      font-size: 26px;
+      min-width: 30px;
+      color: #949494;
+    }
+  } 
+} 
+#menu_container_2 {
+  md-menu-content {
+    &.md-menu-bar-menu.md-dense {
+      .md-button {
+        height: auto;  
+        &:after {
+          display: none;
+        }
+      }
+      md-menu-item {
+        height: 40px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 960px) {
+  md-menu-content[width="3"] {
+    min-width: 164px;
+  }
+}
+/* Theme Options */
+
+$theme-panel-width: 220px;
+$theme-panel-button-width: 48px;
+#theme-options-list {
+  width: $theme-panel-width;
+  min-width: $theme-panel-width;
+  max-width: $theme-panel-width;
+  max-height: 400px;
+  background: $white-color;
+  z-index: 12;
+  .theme-option {
+    padding: 0 16px 30px;
+    md-radio-button {
+      margin: 8px;
+    }
+    .option-title {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0 8px 12px 8px;
+    }
+    .theme {
+      padding: 4px 8px;
+      .theme-button {
+        border-right: 8px solid;
+        text-align: left;
+      }
+    }
+  }
+}
+
+md-radio-button.md-default-theme.md-checked .md-off, 
+md-radio-button.md-checked .md-off {
+    border-color: rgba(56,169,230,1);
+}
+md-radio-button.md-default-theme .md-on, 
+md-radio-button .md-on {
+      background-color: rgba(56,169,230,1);
+}
+
+md-checkbox .md-container {
+   background-color: $white-color;
+}
+md-checkbox:not([disabled]).md-checked .md-icon {
+  background-color: $white-color;
+  border: 2px solid #0185d2;
+}
+md-checkbox.md-default-theme:not([disabled]).md-checked .md-icon:after, 
+md-checkbox:not([disabled]).md-checked .md-icon:after {
+  border-color: rgba(56,169,230,1);
+}
+md-checkbox.md-checked .md-icon:after {
+    left: 4.66667px;
+    top: 1.22222px;
+    border-width: 3px;
+}

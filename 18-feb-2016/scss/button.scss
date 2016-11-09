@@ -1,0 +1,45 @@
+/* BUTTON */
+
+.btn {
+	padding: 3px 20px;
+	font-size: 18px;
+	font-weight: $font-weight-semibold;
+	border-radius: 5px;
+	
+	&.md-button {
+		&.md-raised {
+			&.md-primary {
+				background-color: $blue-color;
+				color: $white-color;
+			}
+			&[disabled] {
+				background-color: rgba(0,0,0,0.12);
+				color: $white-color !important;
+			}
+			&:not([disabled]) {
+				&:hover {
+					background-color: rgba(0, 135, 207, 0.75); 
+				}
+				&.md-focused {
+					background-color: rgba(0, 135, 207, 0.75); 	
+				}
+			}
+			&.md-focused {
+				background-color: rgba(0, 135, 207, 0.75); 
+			}
+			&[disabled] {
+				md-icon {
+					color: $white-color;
+				}
+			}
+		}
+	}
+	.icon-angle-right {
+		font-size: 20px;
+		height: 28px;
+	}
+}  
+
+.button-actions {
+	margin-top: 20px;
+}

@@ -1,0 +1,415 @@
+<md-dialog aria-label="Autocomplete Dialog Example" ng-cloak class="review-access-dialog-box">
+    <div class="close-popup cursor-pointer" ng-transclude="" ng-click="ctrl.cancel()" aria-label="Close dialog">
+        <i class="icon-remove blue-text"></i>
+    </div>
+    <div class="md-toolbar-tools">
+        <h2><strong>Review Access:</strong> John A. Smith</h2>
+    </div>
+    <md-dialog-content>
+
+        <table class="app-table parent-table">
+            <thead>
+                <tr>
+                    <th>Requested Access Details</th>
+                    <th class="appTable-thead-info">
+                        <span>
+                                <strong>Valid From</strong> December 27th, 2015 </span>
+                        <span><strong>until</strong> Janauary 27th, 2016</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="app-table-in">
+                <tr>
+                    <td width="100%" colspan="2">
+                        <table width="100%" class="col-2-tbl">
+                            <tr>
+                                <td>
+                                    <h5>Access to SCSP</h5>
+                                </td>
+                                <td>
+                                    <table class="app-table">
+                                        <tr>
+                                            <td>Regions</td>
+                                            <td>North America</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Departments</td>
+                                            <td>Corporate, Infastructure, Technology</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Work Roles</td>
+                                            <td>Primary Analyst</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Access Validity</td>
+                                            <td>Value</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Special Content Access</td>
+                                            <td>Value</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Requested By</td>
+                                            <td ng-controller="DemoCtrl as ctrl">
+
+                                                <span ns-popover ns-popover-template="popover" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="right" class="blue-text font-weight-600 cursor-pointer">Joan Johnson </span> &nbsp; &nbsp; &nbsp; <i class="icon-user light-gray-text"></i>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="display-block">Justification</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- ./app-table -->
+
+        <table class="app-table parent-table current-table">
+            <thead>
+                <tr>
+                    <th>Current Access Details</th>
+                    <th class="appTable-thead-info">
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="app-table-in">
+                <tr>
+                    <td colspan="2">
+                        <table class="col-2-tbl">
+                            <tr>
+                                <td ng-controller="FilterController">
+                                    <div class="accordion righticon-accordion">
+                                        <div class="accordion-container">
+                                            <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                <h3>Work Roles</h3>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="data-list-tbl">
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.accordion-content-->
+                                        </div>
+                                        <!--/.accordion-container-->
+
+                                        <div class="accordion-container">
+                                            <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                <h3>Regions</h3>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="data-list-tbl">
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.accordion-content-->
+                                        </div>
+                                        <!--/.accordion-container-->
+
+                                        <div class="accordion-container">
+                                            <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                <h3>Application</h3>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="data-list-tbl">
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.accordion-content-->
+                                        </div>
+                                        <!--/.accordion-container-->
+
+                                        <div class="accordion-container">
+                                            <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                <h3>Departments</h3>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="data-list-tbl">
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.accordion-content-->
+                                        </div>
+                                        <!--/.accordion-container-->
+
+                                        <div class="accordion-container">
+                                            <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                <h3>Jobs</h3>
+                                            </div>
+                                            <div class="accordion-content">
+                                                <div class="data-list-tbl">
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Data manages</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                    <div class="dlt-row">
+                                                        <span>Primary Analyst</span>
+                                                        <i>#43243232</i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.accordion-content-->
+                                        </div>
+                                        <!--/.accordion-container-->
+
+                                    </div>
+                                    <!-- ./accordion -->
+                                </td>
+                                <td>
+                                    <table class="app-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Summary</th>
+                                                <th class="appTable-thead-info">
+                                                    <span><strong>Valid From</strong> December 27th, 2015 </span>
+                                                    <span><strong>until</strong><span class="red-text margin-0">Janauary 27th, 2016</span></span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td class="display-block">Database</td>
+                                                <td class="none-tbl">
+                                                    <table>
+                                                        <tr>
+                                                            <td>Oracle 10g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>MySQl</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Oracle 11g</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Environments</td>
+                                                <td class="none-tbl">
+                                                    <table>
+                                                        <tr>
+                                                            <td>Dev</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>QA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PROD</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PROD2</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Linx Access</td>
+                                                <td>Yes</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Departments</td>
+                                                <td class="none-tbl">
+                                                    <table>
+                                                        <tr>
+                                                            <td>Infrastructure </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>International Public Finance</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>US Public Finance </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Content Access</td>
+                                                <td class="none-tbl">
+                                                    <table>
+                                                        <tr>
+                                                            <td>Read/Wire: Analytical Content</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Read/Wire: Commercial Content</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Special Contact Access</td>
+                                                <td class="none-tbl">
+                                                    <table>
+                                                        <tr>
+                                                            <td>Create Estimates</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Trading Estimates</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Financial Group</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Trading Group</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Special Content Environment</td>
+                                                <td class="none-tbl">
+                                                    <table>
+                                                        <tr>
+                                                            <td>Dev</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>QA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>PROD</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="display-block">Justification</td>
+                                                <td>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<span ng-click="readmoretext($event);" class="read_more cursor-pointer blue-text">...</span><span class="remaining_text" style="display:none;">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span style="display:none;" class="less_more cursor-pointer blue-text" ng-click="lessmoretext($event);">hide</span></span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- ./app-table -->
+
+    </md-dialog-content>
+
+</md-dialog>
+<!-- ./dialog-box -->

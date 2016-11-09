@@ -1,0 +1,613 @@
+<div class="inner-page my-access">
+    <div class="new-request-content">
+        <div class="header" layout-align="start center">
+            <h2>My Access</h2>
+        </div>
+        <!-- ./header -->
+    </div>
+</div>
+
+<md-toolbar class="my-access-toolbar">
+    <md-tabs md-selected="currentTab">
+        <md-tab><span>Current Access</span></md-tab>
+        <md-tab><span>History</span></md-tab>
+    </md-tabs>
+</md-toolbar>
+
+<div class="content-card bgc-t" layout="column" flex ng-class="{'responsive-read-pane' : vm.responsiveReadPane}" ui-view="content-card">
+    <div class="content-wrapper" layout="row" ng-controller="FilterController" flex>
+        <perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+        <md-content class="content flex-100 ms-scroll ng-scope md-default-theme" flex="100" ms-scroll>
+            <div class="sprs-tabs">
+                <div class="inner-page my-access">
+                    <md-tabs md-dynamic-height md-selected="currentTab" class="noTabPanel">
+                        <md-tab label="Tab One">
+                            <md-content>
+                                <div class="tab-2col-lauout">
+                                    <table>
+                                        <tbody class="app-table-in" id="tab_accordion">
+                                            <tr>
+                                                <td>
+                                                    <table class="col-2-tbl">
+                                                        <tr>
+                                                            <td>
+                                                                <div class="accordion righticon-accordion">
+                                                                    <div class="accordion-container">
+                                                                        <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                                            <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                                            <h3>Work Roles</h3>
+                                                                        </div>
+                                                                        <div class="accordion-content">
+                                                                            <div class="data-list-tbl">
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--/.accordion-content-->
+                                                                    </div>
+                                                                    <!--/.accordion-container-->
+
+                                                                    <div class="accordion-container">
+                                                                        <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                                            <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                                            <h3>Regions</h3>
+                                                                        </div>
+                                                                        <div class="accordion-content">
+                                                                            <div class="data-list-tbl">
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--/.accordion-content-->
+                                                                    </div>
+                                                                    <!--/.accordion-container-->
+
+                                                                    <div class="accordion-container">
+                                                                        <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                                            <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                                            <h3>Application</h3>
+                                                                        </div>
+                                                                        <div class="accordion-content">
+                                                                            <div class="data-list-tbl">
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--/.accordion-content-->
+                                                                    </div>
+                                                                    <!--/.accordion-container-->
+
+                                                                    <div class="accordion-container">
+                                                                        <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                                            <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                                            <h3>Departments</h3>
+                                                                        </div>
+                                                                        <div class="accordion-content">
+                                                                            <div class="data-list-tbl">
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--/.accordion-content-->
+                                                                    </div>
+                                                                    <!--/.accordion-container-->
+
+                                                                    <div class="accordion-container">
+                                                                        <div href="javascript:void(0);" class="accordion-toggle idealsteps-nav" ng-click="accordion_dialog_toggle($event)">
+                                                                            <span class="toggle-icon"><i  class="icon-plus-sign"></i></span>
+                                                                            <h3>Jobs</h3>
+                                                                        </div>
+                                                                        <div class="accordion-content">
+                                                                            <div class="data-list-tbl">
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Data manages</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                                <div class="dlt-row" ng-click="showapp_table($event);">
+                                                                                    <span>Primary Analyst</span>
+                                                                                    <i>#43243232</i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!--/.accordion-content-->
+                                                                    </div>
+                                                                    <!--/.accordion-container-->
+
+                                                                </div>
+                                                                <!-- ./accordion -->
+                                                            </td>
+                                                            <td class="text-center access-not-found">
+                                                                <div class="no-access-found">
+                                                                    <img class="icon-img" src="images/icon_user-settings.png">
+                                                                    <h3>No Access Selected
+                                                                    <br>Select Your Access from the
+                                                                    <br>Options Available on the left</h3>
+                                                                </div>
+                                                            </td>
+                                                            <td class="hide access-info-table">
+                                                                <table class="app-table ap-header-tbl">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Summary</th>
+                                                                            <th class="appTable-thead-info">
+                                                                                <span><strong>Valid From</strong> December 27th, 2015 </span>
+                                                                                <span><strong>until</strong><span class="red-text margin-0">Janauary 27th, 2016</span></span>
+                                                                            </th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                </table>
+                                                                <table class="app-table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="display-block">Database</td>
+                                                                            <td class="none-tbl">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>Oracle 10g</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>MySQl</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Oracle 11g</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Environments</td>
+                                                                            <td class="none-tbl">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>Dev</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>QA</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>PROD</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>PROD2</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Linx Access</td>
+                                                                            <td>Yes</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Departments</td>
+                                                                            <td class="none-tbl">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>Infrastructure </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>International Public Finance</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>US Public Finance </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Content Access</td>
+                                                                            <td class="none-tbl">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>Read/Wire: Analytical Content</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Read/Wire: Commercial Content</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Special Contact Access</td>
+                                                                            <td class="none-tbl">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>Create Estimates</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Trading Estimates</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Financial Group</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Trading Group</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Special Content Environment</td>
+                                                                            <td class="none-tbl">
+                                                                                <table>
+                                                                                    <tr>
+                                                                                        <td>Dev</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>QA</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>PROD</td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="display-block">Justification</td>
+                                                                            <td>
+                                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<span ng-click="readmoretext($event);" class="read_more cursor-pointer blue-text">...</span><span class="remaining_text" style="display:none;">sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <span style="display:none;" class="less_more cursor-pointer blue-text" ng-click="lessmoretext($event);">hide</span></span>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </md-content>
+                        </md-tab>
+                        <md-tab label="Tab Two">
+                            <md-content>
+                                <div class="history-mails">
+                                    <div class="history-mailslist">
+                                        <ul>
+                                            <li class="clearfix timeline-post active">
+                                                <span class="history-timeline-date">12/01//2015 <small>23:45</small></span>
+                                                <div class="history-timeline-dot"></div>
+                                                <div class="history-timeline-content-wrap">
+                                                    <div class="history-timeline-content">
+                                                        <div id="mail">
+                                                            <div class="mail-list-pane">
+                                                                <div class="mail-list-expanded">
+                                                                    <div class="horz-row">
+                                                                        <div class="mail-list-item-info">
+                                                                            <span><strong>#2345678994</strong></span>
+                                                                            <span class="font-weight-600">Access to CORE</span>
+                                                                            <div class="pull-right">
+                                                                                <span class="mail-list-status approved-text hide-sm" hide-sm>Active</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mail-list-item-msg">
+                                                                            <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+                                                                        </div>
+                                                                        <div class="mail-list-item-category">
+
+                                                                            <div>
+                                                                                <strong>Category</strong>
+                                                                                <span>Department</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <strong>Assigned To</strong>
+                                                                                <span>Vicky Sanchez</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix timeline-post active">
+                                                <span class="history-timeline-date">11/17/2015<small>17:39</small></span>
+                                                <div class="history-timeline-dot"></div>
+                                                <div class="history-timeline-content-wrap">
+                                                    <div class="history-timeline-content">
+                                                        <div id="mail">
+                                                            <div class="mail-list-pane">
+                                                                <div class="mail-list-expanded">
+                                                                    <div class="horz-row">
+                                                                        <div class="mail-list-item-info">
+                                                                            <span><strong>#2345678993</strong></span>
+                                                                            <span class="font-weight-600">Access to Arrow Global</span>
+                                                                            <div class="pull-right">
+                                                                                <span class="mail-list-status approved-text" hide-sm>Active</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mail-list-item-msg">
+                                                                            <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+                                                                        </div>
+                                                                        <div class="mail-list-item-category">
+
+                                                                            <div>
+                                                                                <strong>Category</strong>
+                                                                                <span>Region</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <strong>Assigned To</strong>
+                                                                                <span class="blue-text font-weight-600" ns-popover ns-popover-template="popover-product-owner" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="right" class="cursor-pointer">Corporate Compliance</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix timeline-post">
+                                                <span class="history-timeline-date">09/12/2015<small>12:12</small></span>
+                                                <div class="history-timeline-dot"></div>
+                                                <div class="history-timeline-content-wrap">
+                                                    <div class="history-timeline-content">
+                                                        <div id="mail">
+                                                            <div class="mail-list-pane">
+                                                                <div class="mail-list-expanded">
+                                                                    <div class="horz-row">
+                                                                        <div class="mail-list-item-info">
+                                                                            <span><strong>#2345678994</strong></span>
+                                                                            <span class="font-weight-600">Access to CORE</span>
+                                                                            <div class="pull-right">
+                                                                                <span class="mail-list-status cancelled-text" hide-sm>Revoked</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mail-list-item-msg">
+                                                                            <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+                                                                        </div>
+                                                                        <div class="mail-list-item-category">
+
+                                                                            <div>
+                                                                                <strong>Category</strong>
+                                                                                <span>Department</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <strong>Assigned To</strong>
+                                                                                <span>Vicky Sanchez</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix timeline-post">
+                                                <span class="history-timeline-date">01/01/2015<small>18:32</small></span>
+                                                <div class="history-timeline-dot"></div>
+                                                <div class="history-timeline-content-wrap">
+                                                    <div class="history-timeline-content">
+                                                        <div id="mail">
+                                                            <div class="mail-list-pane">
+                                                                <div class="mail-list-expanded">
+                                                                    <div class="horz-row">
+                                                                        <div class="mail-list-item-info">
+                                                                            <span><strong>#2345678995</strong></span>
+                                                                            <span class="font-weight-600">Business Objects for team</span>
+                                                                            <div class="pull-right">
+                                                                                <span class="mail-list-status cancelled-text" hide-sm>Expired</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mail-list-item-msg">
+                                                                            <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+                                                                        </div>
+                                                                        <div class="mail-list-item-category">
+                                                                            <div>
+                                                                                <strong>Category</strong>
+                                                                                <span>Region</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <strong>Assigned To</strong>
+                                                                                <span>Tom Burke</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix timeline-post active">
+                                                <span class="history-timeline-date">07/29/2015<small>22:45</small></span>
+                                                <div class="history-timeline-dot"></div>
+                                                <div class="history-timeline-content-wrap">
+                                                    <div class="history-timeline-content">
+                                                        <div id="mail">
+                                                            <div class="mail-list-pane">
+                                                                <div class="mail-list-expanded">
+                                                                    <div class="horz-row">
+                                                                        <div class="mail-list-item-info">
+                                                                            <span><strong>#2345678993</strong></span>
+                                                                            <span class="font-weight-600">Access to Arrow Global</span>
+                                                                            <div class="pull-right">
+                                                                                <span class="mail-list-status approved-text" hide-sm>Active</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mail-list-item-msg">
+                                                                            <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+                                                                        </div>
+                                                                        <div class="mail-list-item-category">
+
+                                                                            <div>
+                                                                                <strong>Category</strong>
+                                                                                <span>Region</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <strong>Assigned To</strong>
+                                                                                <span class="blue-text font-weight-600" ns-popover ns-popover-template="popover-product-owner" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="right" class="cursor-pointer">Corporate Compliance</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="clearfix timeline-post active">
+                                                <span class="history-timeline-date">07/29/2015<small>13:45</small></span>
+                                                <div class="history-timeline-dot"></div>
+                                                <div class="history-timeline-content-wrap">
+                                                    <div class="history-timeline-content">
+                                                        <div id="mail">
+                                                            <div class="mail-list-pane">
+                                                                <div class="mail-list-expanded">
+                                                                    <div class="horz-row">
+                                                                        <div class="mail-list-item-info">
+                                                                            <span><strong>#2345678993</strong></span>
+                                                                            <span class="font-weight-600">Access to Arrow Global</span>
+                                                                            <div class="pull-right">
+                                                                                <span class="mail-list-status approved-text" hide-sm>Active</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="mail-list-item-msg">
+                                                                            <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+                                                                        </div>
+                                                                        <div class="mail-list-item-category">
+
+                                                                            <div>
+                                                                                <strong>Category</strong>
+                                                                                <span>Region</span>
+                                                                            </div>
+                                                                            <div>
+                                                                                <strong>Assigned To</strong>
+                                                                                <span class="blue-text font-weight-600" ns-popover ns-popover-template="popover-product-owner" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="right" class="cursor-pointer">Corporate Compliance</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </md-content>
+                        </md-tab>
+                    </md-tabs>
+                </div>
+            </div>
+
+        </md-content>
+        </perfect-scrollbar>
+        <!-- ./mail-list-pane -->
+    </div>
+    <!-- ./content-wrapper -->
+</div>
+<!-- ./content-card-->

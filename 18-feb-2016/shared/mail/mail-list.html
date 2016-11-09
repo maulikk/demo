@@ -1,0 +1,2332 @@
+<div class="alert alert-success hide" id="alert-approve-success" role="alert">
+    <div class="success-link">
+        You have successfully <span>APPROVED</span> the selected Access Requests <strong>for Amelia Jackson</strong>
+    </div>
+</div>
+
+<div class="alert alert-success hide" id="alert-briefcase-success" role="alert">
+    <div class="success-link">
+        You Briefcase has been submitted successfully.<span>Your Order ID:</span><strong>#4378</strong>
+    </div>
+</div>
+
+<div class="alert alert-success hide" id="alert-access-success" role="alert">
+    <div class="success-link">
+        You have successfully submitted Certifications for <strong>Jim Sands</strong>
+    </div>
+</div>
+<div class="mail-list-item mailstatus-request mailstatus-pending" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name md-layout-row" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">John A. Smith
+                    <i class="icon-question-sign help-icon"></i> 
+                </span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/17/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <!-- <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button> -->
+            <div class="md-icon status">
+                <img src="images/icon_status-half.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span class="font-weight-600" ui-sref="home.access">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                     <span class="blue-text font-weight-600" ns-popover ns-popover-template="popover-product-owner" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="right" class="cursor-pointer">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon" ns-popover ns-popover-template="popover-questions-comments" ns-popover-theme="ns-popover-list-theme" ns-popover-trigger="click" ns-popover-placement="right"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-request mailstatus-completed" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">Sally Jones</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/20/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="md-icon status">
+                <img src="images/icon_status-full.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-request mailstatus-pending" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">Greg Knowlton</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/25/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+            <div class="md-icon status">
+                <img src="images/icon_status.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-certifications mailstatus-completed" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon">
+                <img src="images/icon_bitmap.png">
+            </div>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding" ui-sref="home.certifications">Jim Sands</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Verify the access and specify appropriate action on this certification.
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/27/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+            <div class="md-icon status">
+                <img src="images/icon_status-full.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-request mailstatus-completed" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">Amelia Jackson</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>12/01/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+            <div class="md-icon status">
+                <img src="images/icon_status-full.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+
+<div class="mail-list-item mailstatus-request  mailstatus-pending" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">John A. Smith
+                    <i class="icon-question-sign help-icon"></i>
+                </span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/17/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+            <div class="md-icon status">
+                <img src="images/icon_status-half.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-request mailstatus-completed" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">Sally Jones</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/20/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+            <div class="md-icon status">
+                <img src="images/icon_status-full.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-request  mailstatus-pending" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon icons-key">
+                <img src="images/icon_key.png">
+            </div>
+            <button name="expand-button" class="md-icon-button md-button ng-scope md-default-theme" ng-click="expand($event)" toogle-starred="Toggle Starred">
+                <i class="icon-style icons-plus-circle"></i>
+            </button>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding">Greg Knowlton</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Requested for Regions <i>#42343223</i>, Work Role <i>#43243232</i>, Department <i>#234323543</i>
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/25/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div class="md-icon status">
+                <img src="images/icon_status.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+<!-- ./mail-list-item -->
+
+<div class="mail-list-item mailstatus-certifications mailstatus-completed" role="button">
+
+    <div class="md-layout-row layout-align-start-center">
+        <div class="mail-item-keylist">
+            <div class="md-icon">
+                <img src="images/icon_bitmap.png">
+            </div>
+        </div>
+
+        <div class="info md-layout-column" flex layout="column">
+            <div class="name" ng-click="expand($event)" layout="row" layout-align="start center">
+                <img class="avatar ng-scope" ng-if="mail.from.avatar" alt="Alice Freeman" ng-src="assets/images/avatars/alice.jpg" src="assets/images/avatars/alice.jpg">
+                <span class="text-truncate ng-binding" ui-sref="home.certifications">Jim Sands</span>
+
+                <md-icon md-font-icon="icon-paperclip" class="has-attachment s16 ng-scope ng-isolate-scope md-font icon-paperclip md-default-theme" ng-if="mail.hasAttachments" aria-hidden="true"></md-icon>
+            </div>
+            <div class="subject text-truncate">Verify the access and specify appropriate action on this certification.
+            </div>
+        </div>
+
+        <div layout="column md-layout-column" layout-align="space-between end">
+            <div class="time ng-binding" hide-sm>11/27/2015</div>
+            <div class="more">
+                <md-menu>
+                    <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                        <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                    </md-button>
+
+                    <md-menu-content width="3">
+                        <md-menu-item>
+                            <md-button aria-label="View" translate-aria-label="MAIL.REPLY" ng-click="vm.replyDialog($event)">
+                                <span translate="MAIL.REPLY">View</span>
+                            </md-button>
+                        </md-menu-item>
+
+                    </md-menu-content>
+                </md-menu>
+            </div>
+
+            <div class="md-icon status">
+                <img src="images/icon_status-full.png">
+                <md-tooltip>
+                    <span translate="MAIL.NEXT">Pending</span>
+                </md-tooltip>
+            </div>
+        </div>
+    </div>
+
+    <div class="mail-list-expanded not-expanded" name="mail-list-expanded">
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678992</strong></span>
+                <span ui-sref="home.access" class="font-weight-600">Access to SCSP</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Work Role</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Sue Lima</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678993</strong></span>
+                <span class="font-weight-600">Access to Arrow Global</span>
+                <div class="pull-right">
+                    <span class="mail-list-status approved-text">Approved</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span class="blue-text font-weight-600">Corporate Compliance</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678994</strong></span>
+                <span class="font-weight-600">Access to CORE
+                    <i class="icon-question-sign help-icon"></i>
+                    </span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Cancelled</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+
+                <div>
+                    <strong>Category</strong>
+                    <span>Department</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Vicky Sanchez</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status pendding-text">Pending</span>
+                    <md-menu>
+                        <md-button aria-label="More" class="md-icon-button" ng-click="$mdOpenMenu($event)" translate translate-aria-label="MAIL.MORE">
+                            <md-icon md-svg-icon="images/more_vert.svg"></md-icon>
+                        </md-button>
+
+                        <md-menu-content width="3">
+                            <md-menu-item>
+                                <md-button ui-sref="home.approval"><span>Approve</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button><span>Reject</span>
+                                </md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ui-sref="home.access#discussionquestion"><span>Question</span>
+                                </md-button>
+                            </md-menu-item>
+
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+        <div class="horz-row expired-mail-list">
+            <div class="mail-list-item-info">
+                <span><strong>#2345678995</strong></span>
+                <span class="font-weight-600">Business Objects for team</span>
+                <div class="pull-right">
+                    <span class="mail-list-status cancelled-text">Expired</span>
+                </div>
+            </div>
+            <div class="mail-list-item-msg">
+                <p>John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details John, requires this for 6 months. We can use this longer space for a longer read on the justification, ellipses go to details </p>
+            </div>
+            <div class="mail-list-item-category">
+                <div>
+                    <strong>Category</strong>
+                    <span>Region</span>
+                </div>
+                <div>
+                    <strong>Assigned To</strong>
+                    <span>Tom Burke</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./mail-list-item-expanded -->
+
+</div>
+
+<!-- ./mail-list-item -->
+</perfect-scrollbar>
+<script type="text/ng-template" id="popover-product-owner">
+    <div class="md-dialog dialog-box user-tbl product-owner-tbl triangle-bdr left" ng-include="'shared/dialog/popover-product-owner.tmpl.html'"></div>
+</script>

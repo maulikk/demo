@@ -1,0 +1,445 @@
+
+/**
+ * overlay
+ * --------------------------------------------------
+ */
+
+.overlay {
+	background: rgba(255, 255, 255, 0.5);
+	width: 100%;
+	height: 100%;
+}
+.footer-info-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.5);
+	height: auto;
+	padding: 15px 10%; 
+	p {
+		font-size: 37px;
+		color: $black-color;
+		font-family: $font-family-opensans-regular;
+		line-height: 38px;
+		margin: 0;
+	}
+	@include breakpoint(md-child) { 
+		p {
+			font-size: 29px;	
+			line-height: normal;
+		}
+	}
+	@include breakpoint(sm) {
+		padding: 8px 10%;
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+/* EPass Overlay */
+
+.epasses-overlay {
+    -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	&.ng-hide {
+	    left: 100%;
+	}
+	.has-header {
+		margin: 0;
+		padding: 0;
+	    top: 127px;
+	}
+	.bar {
+		padding: 0;
+		.title {
+			position: inherit;
+			width: 100%;
+			text-align: center;
+			margin: 10px 0 8px;
+			line-height: normal;
+		}
+	}
+	.app-innerpage-header {
+		text-align: center;
+		height: auto;
+		position: static;
+		.header-item {
+			img {
+				width: 625px;
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+	.form-row {
+		.form-group {
+			font-family: Arial;
+			margin-bottom: 15px;
+			label,
+			span {
+				font-weight: bold;  
+				font-size: 32px;
+			}
+		}
+	}
+	.date-time {
+		text-align: center;
+		margin: 20px 0;
+		span {
+			font-family: Arial;
+			font-weight: bold;
+			margin: 0 25px;
+			color: #707070;
+			font-size: 32px;
+		}
+	}
+	.btn-redeem {
+		border: none;
+		background: $black-color;
+		color: $light;
+		font-size: 38px;
+		font-family: $font-family-bebasneue-bold;
+		text-transform: uppercase;
+		padding: 2px 0;
+		margin: 0 0 20px;
+		width: 260px;
+		&.btn-authorised { 
+			background-color: #b80000;
+		}
+		// &.green-btn {
+		// 	background: #27ae61;
+		// 	border: 4px solid #ccc;
+		// }
+	}
+	
+	.icon-arrow {
+		&.pos-center {
+			right: auto;
+			left: 0;
+			margin-right: 0;
+			margin-left: -60px;
+		}
+	}
+
+	.merchant-code {
+		.item-input-wrapper {
+			background-color: transparent;
+		}
+	}
+
+	@include breakpoint(md-child) {
+		.bar {
+			.title {
+				margin: 8px 0 6px;
+			}
+		}
+		.has-header {
+		    top: 100px;
+		}
+		.app-innerpage-header {
+			.header-item {
+				img {
+					width: 488px;
+				}
+			}
+		}
+		.date-time { 
+			margin: 15px 0;
+			span { 
+				margin: 0 20px;
+				font-size: 27px;
+			}
+		}
+		.btn-redeem {
+			font-size: 29px;
+			width: 205px;
+			margin: 0 0 10px; 
+		}
+		.form-row {
+			.form-group { 
+				margin-bottom: 15px;
+				label,
+				span { 
+					font-size: 25px;
+				}
+			}
+		}
+		.icon-arrow {
+			&.pos-center {
+				margin-right: 0;
+				margin-left: -48px;
+			}
+		}
+
+	}
+	@include breakpoint(sm) {
+		.bar {
+			.title {
+				margin: 7px 0 4px;
+			}
+		}
+		.has-header {
+		    top: 75px;
+		}
+		.app-innerpage-header {
+			.header-item {
+				img {
+					width: 365px;
+				}
+			}
+		}
+		.date-time { 
+			margin: 10px 0;
+			span { 
+				margin: 0 15px;
+				font-size: 20px;
+			}
+		}
+		.btn-redeem {
+			font-size: 22px;
+			margin: 0 0 10px;
+			width: 155px;
+		}
+		.form-row {
+			.form-group { 
+				label,
+				span { 
+					font-size: 19px;
+				}
+			}
+		}
+		.icon-arrow {
+			&.pos-center {
+				margin-right: 0;
+				margin-left: -36px;
+			}
+		}
+	}
+	@include breakpoint(xs) {
+		.bar {
+			.title {
+				margin: 5px 0 3px;
+			}
+		}
+		.has-header {
+		    top: 65px;
+		}
+		.app-innerpage-header {
+			.header-item {
+				img {
+					width: 315px;
+				}
+			}
+		}
+		.date-time { 
+			margin: 10px 0;
+			span { 
+				margin: 0 10px;
+				font-size: 18px;
+			}
+		}
+		.btn-redeem {
+			font-size: 19px;
+			margin: 0 0 10px; 
+			width: 135px;
+		}
+		.form-row {
+			.form-group { 
+				margin-bottom: 8px;
+				label,
+				span { 
+					font-size: 16px;
+				}
+			}
+		}
+		.icon-arrow {
+			&.pos-center {
+				margin-right: 0;
+				margin-left: -31px;
+			}
+		}
+	}
+}
+// @include gradient(saturate($primary-gradient-from, 0.1%), darken($primary-gradient-to, 0.1%)); 	
+.logo-rotator {
+	width: 100%;
+	background-size: 150% auto !important;
+	&.primary-3D-text {
+		background: url(../img/primary_3D-text-bg.png) center center no-repeat;
+	}
+	&.preferred-3D-text {
+		background: url(../img/preferred_3D-text-bg.png) center center no-repeat;
+	}
+	&.premier-3D-text {
+		background: url(../img/premier_3D-text-bg.png) center center no-repeat;
+	}
+	&.platinum-3D-text {
+		background: url(../img/platinum_3D-text-bg.png) center center no-repeat;
+	}
+	&.firstResponders-3D-text {
+		background: url(../img/firstResponders_3D-text-bg.png) center center no-repeat;
+	}
+	&.military-3D-text {
+		background: url(../img/military_3D-text-bg.png) center center no-repeat;
+	}
+	&.oneday-3D-text {
+		background: url(../img/1day_3D-text-bg.png) center center no-repeat;
+	}
+	&.threedays-3D-text {
+		background: url(../img/3days_3D-text-bg.png) center center no-repeat;
+	}
+	&.fivedays-3D-text {
+		background: url(../img/5days_3D-text-bg.png) center center no-repeat;
+	}
+	&.tendays-3D-text {
+		background: url(../img/10days_3D-text-bg.png) center center no-repeat;
+	}
+	&.fifteendays-3D-text {
+		background: url(../img/15days_3D-text-bg.png) center center no-repeat;
+	}
+	.logo-rotator-in {
+		text-align: center;
+		padding: 35px 0;
+	}
+	.threeDimg { 
+		width: 460px;
+		height: auto;
+	}
+	@include breakpoint(md-child) {
+		.logo-rotator-in {
+			padding: 23px 0;
+		}
+		.threeDimg { 
+			width: 360px; 
+		}
+	}
+	@include breakpoint(sm) {
+		.logo-rotator-in {
+			padding: 18px 0;
+		}
+		.threeDimg { 
+			width: 270px; 
+		}
+	}
+	@include breakpoint(xs) {
+		.logo-rotator-in {
+			padding: 10px 0;
+		}
+		.threeDimg { 
+			width: 230px; 
+		}
+	}
+} 
+
+.btn-visitor {
+	width: 110px;
+	height: 110px;
+	text-align: center;
+	font-size: 26px;
+	padding: 0 !important;
+	font-family: $font-family-futura-book;
+	top: auto !important;
+	bottom: 15px;
+	span {
+		display: block !important;
+		width: 100% !important;
+		margin: 0 !important;
+	} 
+	img {
+		width: 60px;
+		height: auto;
+	}
+	@include breakpoint(md-child) {
+		width: 85px;
+		height: 85px;
+		font-size: 20px;
+		img {
+			width: 48px;
+		}
+	}
+	@include breakpoint(sm) {
+		width: 65px;
+		height: 65px;
+		font-size: 16px;
+		img {
+			width: 38px;
+		}
+	}
+	@include breakpoint(xs) {
+		width: 55px;
+		height: 55px;
+		font-size: 13px;
+		img {
+			width: 32px;
+		}
+	}
+}
+
+
+.full-page-alert {
+	h4 {
+		font-family: $font-family-opensans-semibold;
+		color: $dark-blue;
+		text-align: center;
+		padding: 100px 10px 0;
+		font-size: 28px;
+	}
+	@include breakpoint(md-child) {
+		h4 { 
+			padding: 80px 10px 0;
+			font-size: 22px;	
+		}
+	}
+	@include breakpoint(sm) {
+		h4 { 
+			padding: 50px 10px 0;
+			font-size: 18px;	
+		}
+	}
+	@include breakpoint(xs) {
+		h4 { 
+			padding: 30px 10px 0;
+			font-size: 16px;	
+		}
+	}
+}
+
+// popup
+
+.popup-container {
+	background: rgba(0, 0, 0, 0.5);
+	.popup {
+		border: 1px solid #CCC;
+		background-color: rgba(255, 255, 255, 1);
+		.popup-head {
+			.popup-title {
+				text-align: center;
+				color: $black-color;
+				font-family: $font-family-opensans-semibold;
+				font-size: 18px !important;
+			}
+		}
+		.popup-buttons {
+			button {
+				&.button {
+					&.ng-binding {
+						&.button-positive {
+							border-color: $dark-blue;
+							background-color: $dark-blue;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+<md-content ms-scroll class="content" flex>
+
+    <div class="navigation-simple" layout="column">
+
+        <md-button ng-click="changeClass()" class="item backburger" aria-label="inbox">
+            <div layout="row" layout-align="start center">
+                <i class="icon-img nav-iconSmall">
+                    <img src="images/icon_backburger.png">
+                </i>
+            </div>
+        </md-button>
+
+        <md-button class="item nav-newrequest" aria-label="inbox" ui-sref="home.newRequest">
+            <div layout="row" layout-align="start center">
+                <i class="icon-img nav-iconSmall">
+                    <img src="images/icon_plus.png">
+                </i>
+                <span class="title" translate="MAIL.INBOX">New Request</span>
+            </div>
+        </md-button>
+
+        <md-button class="item nav-inbox" aria-label="inbox" ui-sref="home">
+            <div layout="row" layout-align="start center">
+                <i class="icon-img">
+                    <img src="images/icon_inbox.png">
+                </i>
+                <span class="title" translate="MAIL.INBOX" data-badge="4">Inbox</span>
+                <span class="badge white-bg light-gray-text">12</span>
+            </div>
+        </md-button>
+
+        <md-button class="item nav-myaccess" aria-label="important" ui-sref="home.myaccess">
+            <div layout="row" layout-align="start center">
+                <i class="icon-img">
+                    <img src="images/icon_my-access.png">
+                </i>
+                <span class="title" flex translate="MAIL.IMPORTANT">My Access</span>
+            </div>
+        </md-button>
+
+        <md-button class="item nav-reports" aria-label="important" ui-sref="home.reports">
+            <div layout="row" layout-align="start center">
+                <i class="icon-img">
+                    <img src="images/icon_reports.png">
+                </i>
+                <span class="title" flex translate="MAIL.IMPORTANT">Reports</span>
+            </div>
+        </md-button>
+
+    </div>
+    <!-- ./navigation-simple -->
+
+</md-content>
+<!-- ./content -->

@@ -1,0 +1,78 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <div class="pull-left">
+            <i class="icon-style icons-comments"></i>
+            <h3>Questions and Comments</h3>
+        </div>
+        <span class="flex"></span>
+        <div class="pull-right cursor-pointer" ng-click="hidePopover()" aria-label="Close dialog">
+            <i class="icon-remove blue-text"></i>
+        </div>
+    </div>
+</md-toolbar>
+<md-dialog-content>
+
+    <div id="popover-discussions" class="discussions" ng-controller="DiscussionController">
+
+        <div class="discussion-header bg-ct">
+            <p><strong>11/21/2015-12:15</strong> <span>Greg Knowlton</span><span ui-sref="home.access#discussion" class="blue-text cursor-pointer pull-right">view Discussion</span>
+            </p>
+        </div>
+        <div class="discussion-content poD-content">
+            <p class="triangle-border left-top">Why was this cancelled? Is there an issue with the request?</p>
+        </div>
+
+        <div id="discussion-responseanswer">
+            <div class="discussion-content" layout="column" flex="100" layout-align="center left">
+                <textarea ng-keyup="discussionresponseanswer($event)" maxlength="512" class="form-control discussion-textarea" placeholder="Enter your response to Greg Knowlton" rows="3"></textarea>
+                <h6 class="form-control-info"><span class="content-length-change">0</span> / 512 Characters used</h6>
+            </div>
+
+        </div>
+        <div class="text-right clearfix">
+            <md-button ng-disabled="true" ng-click="homePopoverPostdiscussionresponse($event)" class="response-button btn md-raised md-primary">RESPONSE</md-button>
+        </div>
+
+        <div class="discussion-content success-discussion-content">
+            <div class="alert alert-success hide" role="alert">
+                <div class="success-link"></div>
+                <div ui-sref='home.access#discussion' class='blue-text text-link'>view Discussion</div>
+            </div>
+        </div>
+        <div class="text-right clearfix">
+            <md-button class="ok-button hide btn md-raised md-primary" ng-click="closediscussion($event)">Ok</md-button>
+        </div>
+        <div id="discuss-question" class="hide">
+
+            <div class="discussion-header">
+                <i class="icon-style icons-comments-question"></i>
+                <p><strong>Ask your question here</strong>
+                </p>
+            </div>
+
+            <div class="discussion-content">
+                <md-input-container class="filter-menu underline-filter">
+                    <label>Select Recipient</label>
+                    <md-select class="user-button" ng-model="selectedUser3">
+                        <md-option value="John Kandra">John Kandra</md-option>
+                        <md-option value="Vrinda Bahgat">Vrinda Bahgat</md-option>
+                        <md-option value="Erik Thompson">Erik Thompson</md-option>
+                    </md-select>
+                </md-input-container>
+            </div>
+
+            <div class="discussion-content" layout="column" flex="100" layout-align="center left">
+                <textarea ng-keyup="discussionquestion($event)" class="form-control green-textarea discussion-question-textarea" placeholder="Enter your question" rows="3"></textarea>
+                <h6 class="form-control-info">
+                                    <span class="content-length-change">0</span> / 512 Characters used
+                                </h6>
+            </div>
+        </div>
+
+        <div class="text-right clearfix">
+            <md-button ng-disabled="true" ng-click="postquestionresponse($event)" class="hide post-button btn md-raised md-primary">POST</md-button>
+            <md-button class="close-question-button hide btn md-raised md-primary" ng-click="closediscussion($event)">CLOSE</md-button>
+        </div>
+    </div>
+    <!-- ./discussions -->
+</md-dialog-content>

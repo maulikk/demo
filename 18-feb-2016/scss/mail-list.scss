@@ -1,0 +1,394 @@
+#mail {
+
+    .mail-list-pane {
+
+        .mail-list-item {
+            position: relative;
+            padding: 5px 12px 5px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            -webkit-transition: height .25s cubic-bezier(.25, .46, .45, .94);
+            transition: height .25s cubic-bezier(.25, .46, .45, .94);
+
+            .help-icon {
+                font-size: 24px !important;
+                color: $warning-color !important;
+                vertical-align: middle;
+            }
+
+            .mail-item-keylist {
+                min-width: 40px;
+            }
+
+            .md-icon {
+                &.icons-key {
+                    width: 32px;
+                    margin-top: 5px;
+                    img {
+                        width: 26px;
+                        height: auto;
+                    }
+                }
+                &.status {
+                    margin-top: 38px;
+                    width: 32px;
+                    text-align: center;
+                    img {
+                        width: 26px;
+                        height: auto;
+                    }
+                }
+            }
+
+            &.read {
+
+            }
+
+            &.unread {
+                background: $white-color;
+
+                .info {
+                    .subject,
+                    .message {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &.selected {
+                background: #E3F2FD;
+            }
+
+            &.checked {
+                background: #FFF8E1;
+            }
+
+            .info {
+                overflow: hidden;
+                width: 0;
+                margin: 0 10px 0 30px;
+
+                .name {
+                    font-size: 16px;
+                    font-weight: $font-weight-semibold;
+                    padding-bottom: 12px;
+                    color: $blue-color;
+                    outline: none;
+                    .avatar {
+                        min-width: 32px;
+                        width: 32px;
+                        height: 32px;
+                        line-height: 32px;
+                    } 
+
+                    .span .help-icon {
+                        font-size: 25px;
+                        color: #dbaf58;
+                        vertical-align: middle;
+                    }
+
+                    .has-attachment {
+                        margin-left: 8px;
+                        transform: rotate(90deg);
+                    }
+                    .icon-img {
+                        top: 5px;
+                        margin-left: 20px;
+                    }
+                }
+
+                .subject {
+                    font-size: 16px;
+                    color: $dark-gray;
+                    i {
+                        color: $gray-color;
+                        font-weight: $font-weight-semibold;
+                    }
+                }
+                .message {
+                    color: rgba(0, 0, 0, 0.54);
+                }
+            }
+
+            .time {
+                /* margin: 0 60px 0 8px; */
+                line-height: 22px;
+                position: absolute;
+                right: 60px;
+                top: 5px;
+                font-size: 14px;
+            } 
+            .md-button {
+                &.md-icon-button {
+                    width: 32px; 
+                    padding: 0;
+                    height: 32px;
+                    min-height: 32px;
+                    margin: 0 0 0 -3px;
+                } 
+            }
+            .md-menu {
+                .md-button {
+                    &.md-icon-button {
+                        margin: 0;
+                    }
+                }
+              .md-font {
+                font-size: 26px;
+                color: $black-color;
+                height: auto;
+              }
+            }
+
+            .layout-align-space-between-end {
+                position: relative;
+                .md-menu {
+                    position: absolute;
+                    right: 0;
+                    top: -5px;
+                    padding: 0;
+                }
+            }
+
+        }
+        
+        .mail-list-expanded { 
+
+            border-top: 1px solid rgba(0, 0, 0, 0.12);
+            // transition: max-height 1s;
+            // -moz-transition: max-height 1s;
+            // -webkit-transition: max-height 1s;
+            // -o-transition: max-height 1s; 
+
+            // -webkit-animation: fadeIn 1s;
+            //  animation: fadeIn 1s;
+ 
+
+            &.expanded {
+                // display: block; 
+                //  opacity: 1;
+                // -webkit-transition: opacity .25s ease-in-out .1s;
+                // transition: opacity .25s ease-in-out .1s
+            }
+            &.not-expanded {
+                // display: none;
+                // -webkit-transition: height .25s cubic-bezier(.25, .46, .45, .94);
+                // transition: height .25s cubic-bezier(.25, .46, .45, .94)
+            }
+            .horz-row {
+                padding: 10px 0;
+                & + .horz-row {
+                    border-top: 1px solid rgba(0, 0, 0, 0.12);
+                }
+                &:last-child {
+                    padding-bottom: 5px;
+                }
+                &.expired-mail-list {
+                    .mail-list-item-info {
+                        background-color: #f4f6f7;
+                        strong,
+                        span {
+                            color: #969799;
+                        }
+                        .pull-right {
+                            span {
+                                margin-right: 30px;
+                            }
+                        }
+                    }
+                    .mail-list-item-category {
+                        strong,
+                        span {
+                          color: #969799;  
+                        }
+                    }
+                    .mail-list-item-msg p {
+                        color: #969799;   
+                    }
+                }
+            }
+            .mail-list-item-info,
+            .mail-list-item-msg,
+            .mail-list-item-category {
+                height: 40px;
+                font-size: 16px;
+                line-height: 40px;
+                padding: 0 10px;
+            }
+            .mail-list-item-info,
+            .mail-list-item-category { 
+                strong {
+                    font-weight: $font-weight-semibold;
+                    color: $dark-gray;
+                    margin-right: 15px;
+                }
+            }
+            .mail-list-item-info {
+                background-color: $light-blue-color;
+                span { 
+                    color: $blue-color;
+                    display: inline !important ;
+                    .help-icon {
+                        font-size: 24px !important;
+                        color: $warning-color !important;
+                        vertical-align: middle;
+                        margin-left: 5px;
+                    }
+                }
+                .pull-right {
+                    span {
+                        margin-right: 10px;
+                    }
+                }
+                .md-menu {
+                    float: right;
+                    padding: 0;
+                    margin: -2px -10px 0 0;
+                    .md-button.md-icon-button {
+                        height: auto;
+                        min-height: auto;
+                    }
+                }
+                .icon-img {
+                    width: 21px;
+                    height: 21px;
+                    display: inline-block;
+                    vertical-align: text-top;
+                    margin-left: 25px;
+                }
+            }
+            .mail-list-item-msg { 
+                p {
+                    width: 500px;
+                    display: inline-block; 
+                    white-space: nowrap;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                }
+            }
+            .mail-list-item-category {
+                background-color: #f4f6f7; 
+                > div {
+                    display: inline;
+                    margin-right: 30px;
+                }                 
+            } 
+        } 
+        .approval-list {
+            .mailboxcard-header {
+                h3 {
+                    display: inline-block;
+                    float: left;
+                    color: $black-color;
+                }
+            }
+        }
+        > .alert {
+            margin-bottom: 0;
+            font-size: 16px;
+            padding: 30px 15px;
+            span {
+                color: $succeed-color;
+            }
+            strong {
+                color: #656565;
+            }
+        }
+    }
+
+    @media screen and (max-width: $layout-breakpoint-md) {
+        .mail-list-pane {
+            .mail-list-item {
+                .info {
+                    margin-left: 0;
+                } 
+                .md-icon {
+                    &.status {
+                        margin-top: 30px;
+                    }
+                } 
+            }
+        }
+    }
+    @media screen and (max-width: $layout-breakpoint-sm) {
+ 
+        .mail-list-pane {
+          .mail-list-expanded {
+            .mail-list-item-info strong, 
+            .mail-list-item-category,
+            .mail-list-item-category strong,
+            .mail-list-item-info span {
+              font-size: 14px; 
+            }
+            .mail-list-item-info {
+                height: auto;
+                line-height: normal;
+                padding: 5px;
+                span {
+                    display: block;
+                }
+                // .pull-right {
+                //     display: none;
+                // }
+            }
+            .mail-list-item-category {
+                height: auto;
+                line-height: normal;
+                padding: 5px;
+                > div {
+                    // display: block;
+                }
+                strong {
+                    margin-right: 10px;
+                }
+            }
+          }
+          .mail-list-item {
+                .md-button {
+                    &.md-icon-button {
+                        
+                    }
+                }
+            }
+        }
+      }
+    
+    @media screen and (max-width: $layout-breakpoint-xsm) {
+        .mail-list-pane {
+            .mail-list-item {
+                .md-icon {
+                    min-width: 35px;
+                    img {
+                        width: 20px;
+                        height: auto;
+                    }
+                }
+                .icon-style {
+                    &.icons-plus-circle {
+                        background-size: 18px 18px;
+                    }
+                }
+                .md-menu {
+                    .md-font {
+                        font-size: 24px;
+                    }
+                } 
+            }
+        }
+
+    }
+
+}
+
+
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
