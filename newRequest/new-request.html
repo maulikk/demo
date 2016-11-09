@@ -1,0 +1,305 @@
+ 
+    <div class="new-request-content">
+        <div class="header" layout-align="start center">
+            <h2>New Request</h2>
+        </div>
+        <!-- ./header -->
+    </div>
+
+    <perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="10" min-scrollbar-length="20">
+    <div class="content-card md-layout-column new-request-content" layout="column" flex ng-class="{'responsive-read-pane' : vm.responsiveReadPane}" ui-view="content-card">
+        <div class="content-wrapper md-layout-column" layout="row" ng-controller="TabController" flex>
+
+            <md-content class="content md-layout-column flex-100 ms-scroll ng-scope md-default-theme" flex="100" ms-scroll>
+
+                <div ng-cloak class="number-tabs">
+                    <md-content>
+
+                        <md-tabs class="number-tabs" md-dynamic-height md-selected="selectedIndex">
+                            <md-tab id="tab1">
+                                <md-tab-label>
+                                    <span class="tab-count">1</span> Beneficiary
+                                </md-tab-label>
+                                <md-tab-body>
+                                    <div class="md-tab-content" ng-include="'shared/newRequest/beneficiary-tab.html'"></div>
+                                </md-tab-body>
+                            </md-tab>
+                            <md-tab id="tab2" ng-disabled="data.secondLocked">
+                                <md-tab-label>
+                                    <span class="tab-count">2</span> Access
+                                </md-tab-label>
+                                <md-tab-body>
+                                    <div class="access-wrap">
+                                        <div class="header-bar">
+                                            <h5 class="name-selection"><span>Sidney Clark</span></h5>
+                                        </div>
+                                        <div class="access_first_wrap">
+                                            <div class="access-filter">
+                                                <md-input-container class="filter-menu underline-filter hide-label">
+                                                    <label>Select Access Category</label>
+                                                    <md-select class="user-button" ng-change="accesscategory()" ng-model="selectedAccess">
+                                                        <md-option value="Regions"><i class="fa icon-globe"></i><span>Regions</span>
+                                                        </md-option>
+                                                        <md-option value="Work Roles"><i class="fa icon-img"><img src="images/icon_workrole.png"></i><span>Work Roles</span>
+                                                        </md-option>
+                                                        <md-option value="Departments"><i class="fa icon-img"><img src="images/icon_department.png"></i><span>Departments</span>
+                                                        </md-option>
+                                                        <md-option value="Applications"><i class="fa icon-tasks"></i><span>Applications</span>
+                                                        </md-option>
+                                                        <md-option value="Jobs"><i class="fa icon-img"><img src="images/icon_users.png"></i><span>Jobs</span>
+                                                        </md-option>
+                                                    </md-select>
+                                                </md-input-container>
+                                                <md-input-container class="filter-menu underline-filter hide-label work-role hide">
+                                                    <label>Select Work Role</label>
+                                                    <md-select class="user-button" ng-change="changeworkrole()" ng-model="selectedworkRole">
+                                                        <md-option value="Primary Analyst">Primary Analyst</md-option>
+                                                        <md-option value="Surveillance Analyst">Surveillance Analyst</md-option>
+                                                        <md-option value="Analytical Manager">Analytical Manager</md-option>
+                                                        <md-option value="Project lead">Project lead</md-option>
+                                                        <md-option value="Lead Analytical Mananger">Lead Analytical Mananger</md-option>
+                                                        <md-option value="Chair">Chair</md-option>
+                                                        <md-option value="Research Assitant">Research Assitant</md-option>
+                                                        <md-option value="Compliance Officer">Compliance Officer</md-option>
+                                                        <md-option value="Data Manager">Data Manager</md-option>
+                                                        <md-option value="Editor">Editor</md-option>
+                                                        <md-option value="Credit Week Editor">Credit Week Editor</md-option>
+                                                        <md-option value="Managerial Editor">Managerial Editor</md-option>
+                                                        <md-option value="Analytical Support unit">Analytical Support unit</md-option>
+                                                    </md-select>
+                                                </md-input-container>
+                                                <md-input-container class="filter-menu underline-filter application-access hide hide-label">
+                                                    <label>Select Application</label>
+                                                    <md-select class="user-button" ng-change="changeapplication()" ng-model="selectedApplication">
+                                                        <md-option value="Arrow Global">Arrow Global</md-option>
+                                                        <md-option value="Bussiness Objects">Bussiness Objects</md-option>
+                                                        <md-option value="Analytical Manager">Analytical Manager</md-option>
+                                                        <md-option value="CORE">CORE</md-option>
+                                                        <md-option value="LinX">LinX</md-option>
+                                                        <md-option value="RAMP Onile(ROL)">RAMP Onile(ROL)</md-option>
+                                                        <md-option value="eFiles">eFiles</md-option>
+                                                        <md-option value="RDR">RDR</md-option>
+                                                    </md-select>
+                                                </md-input-container>
+                                            </div>
+                                            <span class="or-seperator">Or</span>
+                                            <div class="search-wrapper layout-align-start-center layout-row flex" layout="row" layout-align="start center" flex="">
+                                                <div class="search layout-align-start-center layout-row flex" flex="" layout="row" layout-align="start center">
+                                                    <input flex="" ng-model="vm.search" type="text" placeholder="Search by Access, Role, Application, etc" translate="" translate-attr-placeholder="MAIL.SEARCH_PLACEHOLDER" class="ng-pristine access_search_tab ng-valid flex ng-touched" aria-invalid="false" style="">
+                                                    <i class="fa icon-search" ng-click="searchworkroles($event)" role="button" tabindex="0"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="padding-10 hide display_results">
+                                            <div class="table-title">
+                                                <p><span>Displaying results for:</span> Data Manager</p>
+                                            </div>
+                                            <table class="app-table">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Access Type</td>
+                                                        <td>Description </td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Applications: Data Manager</td>
+                                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Regions: Data Manager</td>
+                                                        <td>Incididunt ut labore et dolore magna aliqua</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p class="cursor-pointer margin-0" ng-click="nextTab();">Work Roles: Data Manager</p>
+                                                        </td>
+                                                        <td>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- ./app-table -->
+                                        </div>
+                                    </div>
+                                </md-tab-body>
+                            </md-tab>
+                            <md-tab id="tab3" ng-disabled="thirdLocked">
+                                <md-tab-label>
+                                    <span class="tab-count">3</span> Form
+                                </md-tab-label>
+
+                                <md-tab-body>
+                                  
+                                    <div class="md-tab-content" ng-include="'shared/newRequest/form-tab.html'"></div>
+                               
+                                </md-tab-body>
+                            </md-tab>
+                            <md-tab id="tab4" ng-disabled="fourthLocked">
+                                <md-tab-label>
+                                    <span class="tab-count">4</span> Summary
+                                </md-tab-label>
+                                <md-tab-body>
+                                    <div class="summary-wrap">
+
+                                        <div class="header-bar border-b4">
+                                            <h5>Summary</h5>
+                                        </div>
+
+                                        <div class="padding-10">
+                                            <div class="search-wrapper layout-align-start-center layout-row flex borderBlue" layout="row" layout-align="start center" flex="">
+                                                <div class="search layout-align-start-center layout-row flex" flex="" layout="row" layout-align="start center">
+                                                    <input flex="" ng-model="vm.search" type="text" ng-keyup="enablebriefcasebutton($event)" placeholder="Enter the title for your Access Request" translate="" translate-attr-placeholder="MAIL.SEARCH_PLACEHOLDER" class="ng-pristine ng-valid flex ng-touched" aria-invalid="false" style="">
+                                                    <md-icon md-font-icon="fa icon-info-sign"></md-icon>
+
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+
+
+
+                                            <table class="app-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Beneficiary</th>
+                                                        <th class="user_name_selection"><span>Sidney Clark</span>
+                                                            <a href="javascript:;" ng-click="gotofirsttab();" class="icon-img"><img src="images/icon_editBlue.png">
+                                                            </a>
+                                                        </th>
+
+                                                    </tr>
+                                                    <tr class="empty-bg">
+                                                        <td colspan="2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Access</th>
+                                                        <th class="summary_work_role_selection"><span>Work Roles: Data Manager</span>
+                                                            <a href="javascript:;" ng-click="editsecondtab();" class="icon-img"><img src="images/icon_editBlue.png">
+                                                            </a>
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="empty-bg">
+                                                        <td colspan="2"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Form</th>
+                                                        <th>
+                                                            <a href="javascript:;" ng-click="editthirdtab();" class="icon-img"><img src="images/icon_editBlue.png">
+                                                            </a>
+                                                        </th>
+
+                                                    </tr>
+
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Valid From</td>
+                                                        <td>December 27th, 2015 <strong>until</strong> January 27th, 2016</td>
+                                                    </tr>
+                                                    <tr class="summary_database">
+                                                        <td>Database</td>
+                                                        <td>
+                                                            <p>Oracle 10g, MySQL, Oracle 11g</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="summary_environments">
+                                                        <td>Environments</td>
+                                                        <td>
+                                                            <p>Dev, QA, PROD, PROD2</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="summary_linx_access">
+                                                        <td>Linx Access</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr class="summary_departments_content">
+                                                        <td>Departments</td>
+                                                        <td>
+                                                            <p>Infastrucure, International public Finance, US public Finance</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="summary_work_regions">
+                                                        <td>Regions</td>
+                                                        <td class="summary_content_work_Regions">
+                                                            <p>North America</p>
+                                                            <p>EMTA</p>
+                                                            <p>LATAM</p>
+                                                            <p>Japan</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="summary_content_access_tr">
+                                                        <td>Content Access</td>
+                                                        <td class="summary_content_access">Read/Write: Analytical Content, Comercial Content</td>
+                                                    </tr>
+                                                    <tr class="summary_special_content_access_tr">
+                                                        <td>Special Content Access</td>
+                                                        <td class="summary_special_content_access">Credit Estimates, Trading Estimates, Financial Groups, Trading Vendors</td>
+                                                    </tr>
+                                                    <tr class="summary_special_environment_tr">
+                                                        <td>Special Content Enviroment</td>
+                                                        <td class="summary_special_environment">Dev, QA, PROD</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Justification</td>
+                                                        <td class="summary_content_justification">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- ./app-table -->
+
+                                            <div class="alert alert-warning icon-warnAlert clearfix">
+                                                <p>Special Content Access is a pre-requisite for access Level</p>
+                                            </div>
+                                            <!-- ./alert -->
+
+                                        </div>
+                                    </div>
+
+                                </md-tab-body>
+                            </md-tab>
+                            <md-tab id="tab5" ng-disabled="fifthLocked">
+                                <md-tab-label>
+                                    <span class="tab-count">5</span> Briefcase
+                                </md-tab-label>
+                                <md-tab-body>
+                                    <div class="md-tab-content" ng-include="'shared/newRequest/briefcase-tab.html'"></div>
+                                </md-tab-body>
+                            </md-tab>
+                        </md-tabs>
+                        <!-- ./number-tabs -->
+
+                        <div class="md-tab-actions clearfix">
+                            <div class="pull-left">
+                                <md-button ng-disabled="true" ng-click="raiserequest()" class="hide raise_briefcase_button btn md-raised md-primary">RAISE ANOTHER REQUEST</md-button>
+                            </div>
+                            <div class="pull-right">
+                                <md-button ng-disabled="true" ng-click="nextTab()" class="next_button btn md-raised md-primary">
+                                    Next
+                                    <md-icon class="icon-angle-right" md-font-icon="icon-angle-right"></md-icon>
+                                </md-button>
+                                <md-button ng-click="startover()" class="hide start_over_button btn md-raised md-primary">START OVER</md-button>
+                                <md-button ng-disabled="true" ng-click="nextTab()" class="hide add_to_briefcase_button btn md-raised md-primary">ADD TO BRIEFCASE</md-button>
+                                <md-button ng-disabled="true" ng-click="cancelrequest()" class="hide cancel_briefcase_button btn md-raised md-primary">CANCEL</md-button>
+                                <md-button ng-disabled="true" ng-click="submitbriefcase()" class="hide submit_briefcase_button btn md-raised md-primary">SUBMIT BRIEFCASE</md-button>
+                                <a href="#">
+                                    <md-button class="hide go_to_index btn md-raised md-primary">GO TO INBOX</md-button>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ./md-tab-actions -->
+
+                    </md-content>
+                </div>
+
+            </md-content>
+            <!-- ./mail-list-pane -->
+
+        </div>
+        <!-- ./content-wrapper -->
+    </div>
+    <!-- ./content-card--> 
+    </perfect-scrollbar>
+
+<script type="text/ng-template" id="popover-information">
+    <div class="md-dialog dialog-box user-tbl popover-information triangle-bdr right" ng-include="'shared/dialog/popover-information.tmpl.html'"></div>
+</script>

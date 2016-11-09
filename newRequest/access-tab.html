@@ -1,0 +1,97 @@
+<div class="access-wrap" ng-controller="TabController">
+    <div class="header-bar">
+        <h5 class="name-selection"><span>Sidney Clark</span></h5>
+    </div>
+
+    <div class="access_first_wrap">
+        <div class="access-filter" >
+            <md-input-container class="filter-menu underline-filter hide-label">
+                <label>Select Access Category</label>
+                <md-select class="user-button" ng-change="accesscategory()" ng-model="selectedAccess">
+                    <md-option value="Regions"><i class="fa icon-globe"></i><span>Regions</span>
+                    </md-option>
+                    <md-option value="Work Roles"><i class="fa icon-img"><img src="images/icon_workrole.png"></i><span>Work Roles</span>
+                    </md-option>
+
+                    <md-option value="Departments"><i class="fa icon-img"><img src="images/icon_department.png"></i><span>Departments</span>
+                    </md-option>
+                    <md-option value="Applications"><i class="fa icon-tasks"></i><span>Applications</span>
+                    </md-option>
+                    <md-option value="Jobs"><i class="fa icon-img"><img src="images/icon_users.png"></i><span>Jobs</span>
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="filter-menu underline-filter hide-label work-role hide">
+                <label>Select Work Role</label>
+                <md-select class="user-button" ng-change="changeworkrole()" ng-model="selectedworkRole">
+                    <md-option value="Primary Analyst">Primary Analyst</md-option>
+                    <md-option value="Surveillance Analyst">Surveillance Analyst</md-option>
+                    <md-option value="Analytical Manager">Analytical Manager</md-option>
+                    <md-option value="Project lead">Project lead</md-option>
+                    <md-option value="Lead Analytical Mananger">Lead Analytical Mananger</md-option>
+                    <md-option value="Chair">Chair</md-option>
+                    <md-option value="Research Assitant">Research Assitant</md-option>
+                    <md-option value="Compliance Officer">Compliance Officer</md-option>
+                    <md-option value="Data Manager">Data Manager</md-option>
+                    <md-option value="Editor">Editor</md-option>
+                    <md-option value="Credit Week Editor">Credit Week Editor</md-option>
+                    <md-option value="Managerial Editor">Managerial Editor</md-option>
+                    <md-option value="Analytical Support unit">Analytical Support unit</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="filter-menu underline-filter application-access hide hide-label">
+                <label>Select Application</label>
+                <md-select class="user-button" ng-change="changeapplication()" ng-model="selectedApplication">
+                    <md-option value="Arrow Global">Arrow Global</md-option>
+                    <md-option value="Bussiness Objects">Bussiness Objects</md-option>
+                    <md-option value="Analytical Manager">Analytical Manager</md-option>
+                    <md-option value="CORE">CORE</md-option>
+                    <md-option value="LinX">LinX</md-option>
+                    <md-option value="RAMP Onile(ROL)">RAMP Onile(ROL)</md-option>
+                    <md-option value="eFiles">eFiles</md-option>
+                    <md-option value="RDR">RDR</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <span class="or-seperator">Or</span>
+        <div class="search-wrapper layout-align-start-center layout-row flex" layout="row" layout-align="start center" flex="">
+            <div class="search layout-align-start-center layout-row flex" flex="" layout="row" layout-align="start center">
+                <input flex="" ng-model="vm.search" type="text" placeholder="Search by Access, Role, Application, etc" translate="" translate-attr-placeholder="MAIL.SEARCH_PLACEHOLDER" class="ng-pristine ng-valid flex ng-touched" aria-invalid="false" style="">
+                <i class="fa icon-search" ng-click="searchworkroles($event)" role="button" tabindex="0"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="clearfix"></div>
+    <div class="padding-10 hide display_results">
+        <div class="table-title">
+            <p><span>Displaying results for:</span> Data Manager</p>
+        </div>
+
+        <table class="app-table">
+            <thead>
+                <tr>
+                    <td>Access Type</td>
+                    <td>Description </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Applications: Data Manager</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</td>
+                </tr>
+                <tr>
+                    <td>Regions: Data Manager</td>
+                    <td>Incididunt ut labore et dolore magna aliqua</td>
+                </tr>
+                <tr>
+                    <td><p ng-click="movetonexttab();">Work Roles: Data Manager</p></td>
+                    <td>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- ./app-table -->
+
+    </div>
+</div>
