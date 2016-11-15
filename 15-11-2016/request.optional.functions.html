@@ -1,0 +1,60 @@
+<div ><!-- ng-scrollbars ng-scrollbars-config="scrollConfig" -->
+
+    <div ng-if="selectedObj.unauth" class="form-overlay">
+    </div>
+    <div class="request-wrap form-wrap">
+
+        <div class="profile-header ng-scope main-header-bar border-b4">
+            <h3 class="border-b4">Standard Profile Request for "{{beneficiaryDisplay}}"</h3>
+        </div>      
+       <form ng-submit="vm.onSubmit()" name="vm.form" novalidate>
+        <div class="padding-10" >           
+            <div ng-show="formLoading" class="load-container"><!-- pos-abs -->
+                <div class="load-speeding-wheel"></div>
+            </div>
+            <div ng-if="primaryCoreRole" class="alert-warning briefcase-clean">
+                <p>Please make sure All the available question(s) are answered to proceed.</p>
+            </div>
+            
+                <formly-form model="vm.model" fields="vm.fields" options="vm.options" form="vm.form">                    
+                </formly-form>
+                    
+            <!--div ng-if="!isPreCanned()" class="alert-warning briefcase-clean">
+                <p ng-if="vm.model.justification && vm.model.justification.length <= justificationLimit" class="justification-count-success">{{vm.model.justification ? vm.model.justification.length:'0'}}/{{justificationLimit}}</p>
+                <p ng-if="!vm.model.justification" class="justification-count-success">0/{{justificationLimit}}</p>
+            </div-->
+
+            <!--pre>{{vm.model| json}}</pre-->
+            <!--pre>{{vm.fields| json}}</pre-->
+            <!--pre>{{vm.form| json}}</pre-->
+            <!--div class="json">
+                <h2>Model Value</h2>
+                <pre>{{vm.model| json}}</pre> 
+                <pre>{{vm.form | json}}</pre>
+                <br/>
+                <br/>
+                <pre>{{vm.fields| json}}</pre>
+            </div-->            
+        </div>
+        <div class="clearfix"></div>
+        <div class="md-tab-actions" style="padding-top:0;">
+            <div class="pull-left"> 
+                <md-button  class="btn md-raised md-primary close-btn" title="SAVE">
+                     SAVE
+                </md-button>
+            </div>
+            <div class="pull-right">      
+
+                <md-button ng-click="editTab(2)" class="btn md-raised md-primary close-btn" title="BACK">
+                    <md-icon class="icon-angle-left" md-font-icon="icon-angle-left"></md-icon> BACK
+                </md-button>
+
+                <md-button  type="submit" class="next_button btn md-raised md-primary">Next
+                    <md-icon class="icon-angle-right" md-font-icon="icon-angle-right"></md-icon>
+                </md-button>
+            </div>
+        </div>
+        </form>   
+    </div>
+    <!--nextTab()-->
+</div>

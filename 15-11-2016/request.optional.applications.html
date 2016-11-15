@@ -1,0 +1,117 @@
+<div ><!-- ng-scrollbars ng-scrollbars-config="scrollConfig" -->
+    <div class="request-wrap access-wrap">
+        <div class="profile-header ng-scope main-header-bar border-b4">
+            <h3>Standard Profile Request for "{{beneficiaryDisplay}}"</h3>
+        </div>
+        <div class="clearfix padding-5"></div>
+        <div>
+            <!-- <p>Your functional role provides you with the following applications</p> -->
+           <p> Your functional role automatically provides you with access to: </p>
+        </div>
+        <table>
+      
+
+		<table  class="show-bold">
+			<tr ng-repeat="item in applicationDisplay" ng-switch on="$index % 2">
+				<td ng-switch-when="0">{{applicationDisplay[$index].id}}
+					{{applicationDisplay[$index].name}}</td>
+				<td ng-switch-when="0"><span ng-show="applicationDisplay[$index+1]">
+						 {{applicationDisplay[$index+1].name}} </span></td>
+
+			</tr>
+		</table>
+
+        <div class="clearfix"></div>
+        <div class="clearfix padding-10"></div>
+        <form name="myApplication" ng-submit="optAppCheckRequired(myApplication.$valid)" novalidate>
+            <label>Select additional application that you require access to:</label>
+           <!--  <div     
+                isteven-multi-select   
+                input-model="optionalApplications"
+                output-model="frmData.optionalApplications"
+                button-label="icon label"
+                item-label="icon label maker"
+                tick-property="ticked"
+                ></div> -->
+			 <div ng-repeat="application in optionalApplications">
+                <label class="checkbox-control">
+                    <md-checkbox aria-label="{{application.label}}" ng-id="{{$index+1}}" ng-change="sync(application.isSelected, application)" ng-disabled="checkDisabled(application.label)"  ng-model="application.isSelected" ng-click="disableDepApps(application.label)">
+                        <span class="label">{{application.label}}</span>
+                    </md-checkbox>
+                </label>
+            </div>
+            <!--div class="form-validation">
+                <div ng-if="myApplication.$submitted && frmData.optionalApplications.length == 0">Application is required.</div>
+            </div-->
+
+            <!--div style="width:42%" >
+                <div class="access-filter" >
+                    <label>Do you require access to any of the optional applications:</label>
+                    
+                    <md-input-container class="filter-menu underline-filter hide-label">
+                        <label>Select Application <span class="error-star">*</span></label>
+                        <md-select multiple class="user-button" ng-model="frmData.application" required>
+                            <md-option ng-repeat="application in applications" ng-value="application">
+                                {{application.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </div>
+            </div-->
+            <div class="clearfix"></div>
+          <!--  <div><p>I do not see the applications I require access to:</p></div>
+            <div>
+                <label  class="checkbox-control">
+                    <md-checkbox ng-model="frmData.showExceptionalApp" ng-click="resetExceptionalapp()" aria-label="Show me all the applications that are not predefined for my job role.">
+                        <span class="label">Show me all the applications that are not predefined for my job role.</span>
+                    </md-checkbox>
+                </label>
+            </div>
+            <div ng-if="frmData.showExceptionalApp">
+                <div
+                    isteven-multi-select
+                    input-model="exceptionalApplications"
+                    output-model="frmData.exceptionalApplications"
+                    button-label="icon label"
+                    item-label="icon label maker"
+                    tick-property="ticked"
+                    ></div>
+                <!--div class="form-validation">
+                    <div ng-if="myApplication.$submitted && frmData.exceptionalApplications.length == 0">Application is required.</div>
+                </div>
+            </div> -->
+
+            <!--div class="clearfix padding-5"></div-->
+            <!--div class="header-bar">
+                <h3>Rationale<span class="red-text">*</span></h3>
+            </div>
+            <div class="justification-area">
+                <md-input-container>
+                    <textarea  name="rationale"  ng-model="frmData.rationale" required></textarea>
+                </md-input-container>
+                <div class="form-validation" ng-messages="myApplication.rationale.$error" ng-if="!frmData.rationale && myApplication.$submitted" >Rationale is required.</div>
+                <div class="alert-warning briefcase-clean justification-count">
+                    <p ng-if="frmData.rationale.length <= precannedJustificationLimit" class="justification-count-success">{{frmData.rationale ? frmData.rationale.length:'0'}}/{{precannedJustificationLimit}}</p>
+                </div>
+            </div-->
+            <div class="clearfix padding-5"></div>
+            <div class="md-tab-actions" style="padding-top:0;">
+                <div class="pull-left">
+                    <md-button class="btn md-raised md-primary close-btn" title="SAVE">
+                        SAVE
+                    </md-button>
+                </div>
+                <div class="pull-right">
+                    <md-button ng-click="editTab(1)" class="btn md-raised md-primary close-btn" title="BACK">
+                        <md-icon class="icon-angle-left" md-font-icon="icon-angle-left"></md-icon> BACK
+                    </md-button>
+
+                    <md-button type="submit" class="next_button btn md-raised md-primary">Next
+                        <md-icon class="icon-angle-right" md-font-icon="icon-angle-right"></md-icon>
+                    </md-button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
