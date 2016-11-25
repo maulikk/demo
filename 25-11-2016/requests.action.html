@@ -1,0 +1,184 @@
+<div><!-- ng-scrollbars ng-scrollbars-config="scrollConfig" -->
+<div class="padding-10 top-padding-10" ng-controller="InboxController">
+    <div class="access-wrap">
+        <div class="profile-header ng-scope main-header-bar border-b4">
+            <div class="inline-block"><h3>Standard Profile Requests</h3></div>			
+            <div class="inline-block float-right"></div>
+        </div>
+    </div>
+    <div>
+        <div class="wrapper" ng-app="testApp" ng-controller="StandardProfileRequestsTreeList" class="tree-table">
+		<div ng-scrollbars style="height:200px;">
+          <table class="table-nested">
+            <thead>
+              <tr>
+                <th class="cell-input">
+                  <input ng-checked="(standardRequestsList | selected).length == standardRequestsList.length" ng-click="toggleAllCheckboxes($event)" type="checkbox" />
+                </th>
+                <th>
+                  Requested for
+                </th>
+                <th class="cell-members">
+                  Created by 
+                </th>
+                <th>
+                  Request Date
+                </th>
+              </tr>
+            </thead>
+            <tbody ng-class="{opened: item.opened}" ng-repeat="item in standardRequestsList">
+              <tr ng-class="{parent: item.children}" ng-init="parentScope = $parent.$parent; initCheckbox(item, parentScope.item)">
+              <td class="cell-input">
+                <input ng-change="toggleCheckbox(item, parentScope)" ng-model="item.selected" type="checkbox" />
+              </td>
+              <td class="cell-name" ng-click="item.opened = !item.opened">
+                <div class="indent" style="padding-left: {{15*level}}px"></div>
+                {{item.beneficiary}}
+              </td>
+              <td class="cell-members">
+                {{item.createdBy}}
+              </td>
+              <td>
+                {{item.requestDate}}
+              </td>
+            </tr>
+            <tr class="children" ng-if="item.children &amp;&amp; item.children.length &gt; 0">
+              <td colspan="4">
+                <table>
+                    <thead>
+                      <tr>
+                        <th class="cell-input">
+                            <!-- Empty -->
+                        </th>
+                        <th>
+                          Functional Role
+                        </th>
+                        <th class="cell-members">
+                          Department
+                        </th>
+                        <th>
+                          Region
+                        </th>
+                      </tr>
+                    </thead>
+                  <tbody ng-class="{opened: item.opened}" ng-init="level = level + 1" ng-repeat="item in item.children">
+                    <tr ng-class="{parent: item.children}" ng-init="parentScope = $parent.$parent; initCheckbox(item, parentScope.item)">
+                      <td class="cell-input">
+                        <input ng-change="toggleCheckbox(item, parentScope)" ng-model="item.selected" type="checkbox" disabled />
+                      </td>
+                      <td class="cell-name" ng-click="item.opened = !item.opened">
+                        <div class="indent" style="padding-left: {{15*level}}px"></div>
+                        {{item.functionalRole}}
+                      </td>
+                      <td class="cell-members">
+                        {{item.department}}
+                      </td>
+                      <td>
+                        {{item.region}}
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </td>
+            </tr>
+              </tbody>
+          </table>
+		  </div>
+			<div class="text-right clearfix">
+				<md-button class="btn md-raised md-primary">APPROVE <md-icon md-font-icon="icon-ok"></md-icon></md-button>
+				<md-button class="btn md-raised md-primary">REJECT <md-icon md-font-icon="icon-remove"></md-icon></md-button>			
+			</div> 
+        </div>
+    </div>
+    
+    <div>
+        <div class="clearfix top-padding-20"></div>
+        <div class="profile-header ng-scope main-header-bar border-b4">
+            <div class="inline-block"><h3>Optional Applications and Functional Requests</h3></div>
+            <div class="inline-block float-right"></div>
+        </div>
+        <div class="wrapper" ng-app="testApp" ng-controller="OptionalRequestsTreeList" class="tree-table">
+		<div ng-scrollbars style="height:200px;">
+          <table class="table-nested">
+            <thead>
+              <tr>
+                <th class="cell-input">
+                  <input ng-checked="(optionalRequestsList | selected).length == optionalRequestsList.length" ng-click="toggleAllCheckboxes($event)" type="checkbox" />
+                </th>
+                <th>
+                  Requested for
+                </th>
+                <th class="cell-members">
+                  Created by 
+                </th>
+                <th>
+                  Request Date
+                </th>
+              </tr>
+            </thead>
+            <tbody ng-class="{opened: item.opened}" ng-repeat="item in optionalRequestsList">
+              <tr ng-class="{parent: item.children}" ng-init="parentScope = $parent.$parent; initCheckbox(item, parentScope.item)">
+              <td class="cell-input">
+                <input ng-change="toggleCheckbox(item, parentScope)" ng-model="item.selected" type="checkbox" />
+              </td>
+              <td class="cell-name" ng-click="item.opened = !item.opened">
+                <div class="indent" style="padding-left: {{15*level}}px"></div>
+                {{item.beneficiary}}
+              </td>
+              <td class="cell-members">
+                {{item.createdBy}}
+              </td>
+              <td>
+                {{item.requestDate}}
+              </td>
+            </tr>
+            <tr class="children" ng-if="item.children &amp;&amp; item.children.length &gt; 0">
+              <td colspan="4">
+                <table>
+                    <thead>
+                      <tr>
+                        <th class="cell-input">
+                            <!-- Empty -->
+                        </th>
+                        <th>
+                          Functional Role
+                        </th>
+                        <th class="cell-members">
+                          Department
+                        </th>
+                        <th>
+                          Region
+                        </th>
+                      </tr>
+                    </thead>
+                  <tbody ng-class="{opened: item.opened}" ng-init="level = level + 1" ng-repeat="item in item.children">
+                    <tr ng-class="{parent: item.children}" ng-init="parentScope = $parent.$parent; initCheckbox(item, parentScope.item)">
+                      <td class="cell-input">
+                        <input ng-change="toggleCheckbox(item, parentScope)" ng-model="item.selected" type="checkbox" disabled />
+                      </td>
+                      <td class="cell-name" ng-click="item.opened = !item.opened">
+                        <div class="indent" style="padding-left: {{15*level}}px"></div>
+                        {{item.functionalRole}}
+                      </td>
+                      <td class="cell-members">
+                        {{item.department}}
+                      </td>
+                      <td>
+                        {{item.region}}
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </td>
+            </tr>
+              </tbody>
+          </table>
+		  </div>
+		    <div class="text-right clearfix">
+				<md-button class="btn md-raised md-primary">APPROVE <md-icon md-font-icon="icon-ok"></md-icon></md-button>
+				<md-button class="btn md-raised md-primary">REJECT <md-icon md-font-icon="icon-remove"></md-icon></md-button>			
+		    </div> 
+        </div>
+    </div>
+</div>  
+</div>  
